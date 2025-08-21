@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Users/Lenovo/Documents/Verilog/Arquitectura25B/Actividad1/TB_and_isim_beh.exe" -prj "C:/Users/Lenovo/Documents/Verilog/Arquitectura25B/Actividad1/TB_and_beh.prj" "work.TB_and" "work.glbl" 

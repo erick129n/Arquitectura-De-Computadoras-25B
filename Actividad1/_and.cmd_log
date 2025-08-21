@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "C:/Users/Lenovo/Documents/Verilog/Arquitectura25B/Actividad1/_and.xst" -ofn "C:/Users/Lenovo/Documents/Verilog/Arquitectura25B/Actividad1/_and.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xa3s50-vqg100-4 _and.ngc _and.ngd  
+map -intstyle ise -p xa3s50-vqg100-4 -cm area -ir off -pr off -c 100 -o _and_map.ncd _and.ngd _and.pcf 
+par -w -intstyle ise -ol high -t 1 _and_map.ncd _and.ncd _and.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml _and.twx _and.ncd -o _and.twr _and.pcf 
