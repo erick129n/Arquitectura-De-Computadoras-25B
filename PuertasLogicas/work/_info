@@ -1,0 +1,83 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/20.1
+vpuertas
+Z0 !s110 1756269828
+!i10b 1
+!s100 W2?LOl?@<jBi85>MLoI6l1
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+INkT=SZJ[LOao8UAl^8NKm3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/Users/Lenovo/Documents/UDG/ProyectosModelSim/PuertasLogicas
+Z4 w1756269391
+Z5 8C:\Users\Lenovo\Downloads\PuertasLogicas.v
+Z6 FC:\Users\Lenovo\Downloads\PuertasLogicas.v
+!i122 0
+L0 3 16
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1756269828.000000
+Z9 !s107 C:\Users\Lenovo\Downloads\PuertasLogicas.v|
+Z10 !s90 -reportprogress|300|-work|work|-stats=none|C:\Users\Lenovo\Downloads\PuertasLogicas.v|
+!i113 1
+Z11 o-work work
+Z12 tCvgOpt 0
+XPuertasLogicas_v_unit
+DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+R0
+VG7n;9Fd8hYK]UAJGnaR8m0
+r1
+!s85 0
+!i10b 1
+!s100 ]8f9`QkVbnUIMkQP47^271
+IG7n;9Fd8hYK]UAJGnaR8m0
+!i103 1
+S1
+R3
+R4
+R5
+R6
+!i122 0
+L0 18 0
+R7
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+n@puertas@logicas_v_unit
+vtestbench_puertas
+R0
+!i10b 1
+!s100 S`UGS@W^PYeTZi[jzPfEA3
+R1
+IA_cg9YTaC>Uj>D9C6f>[Q0
+R2
+R3
+w1756269819
+8C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/PuertasLogicas/Puertas_TB.v
+FC:/Users/Lenovo/Documents/UDG/ProyectosModelSim/PuertasLogicas/Puertas_TB.v
+!i122 1
+L0 3 33
+R7
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/PuertasLogicas/Puertas_TB.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/PuertasLogicas/Puertas_TB.v|
+!i113 1
+R11
+R12

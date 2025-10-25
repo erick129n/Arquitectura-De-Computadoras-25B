@@ -1,0 +1,291 @@
+vsim work.coreTB
+# vsim work.coreTB 
+# Start time: 22:53:36 on Oct 24,2025
+# Loading work.coreTB
+# Loading work.NucleoTop
+# Loading work.PC
+# Loading work.sumador
+# Loading work.memoryInstructions
+# Loading work.IF_ID
+# Loading work.Control
+# Loading work.Registros
+# Loading work.ID_EX
+# Loading work.ALUcontrol
+# Loading work.MUX
+# Loading work.ALU
+# Loading work.EX_MEM
+# Loading work.memoriaDatos
+# Loading work.MEM_WB
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'pipeline'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/IF_ID.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/IF_ID File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 40
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (16) for port 'data_extend_in'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/ID_EX.v(16).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/ID_EX File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 104
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'dato'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_regDest File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 154
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'dato2'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_regDest File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 154
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'datoOut'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_regDest File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 154
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'AWriteMem_in'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/EX_MEM.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/EX_MEM File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 168
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'dato2'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 188
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'datoOut'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 188
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/MemoryData.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/memoriaDatos File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 195
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'direccion_out'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/MEM_WB.v(12).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/MEM_WB File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 206
+# Compile of EX_MEM.v was successful.
+run
+run
+run
+run
+run
+run
+run
+run
+run -all
+# Break key hit
+# Break in Module coreTB at C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/NucleoTB.v line 23
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.EX_MEM
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'pipeline'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/IF_ID.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/IF_ID File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 40
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (16) for port 'data_extend_in'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/ID_EX.v(16).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/ID_EX File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 104
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'dato'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_regDest File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 154
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'dato2'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_regDest File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 154
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'datoOut'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_regDest File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 154
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'AWriteMem_in'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/EX_MEM.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/EX_MEM File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 168
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'dato2'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 188
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'datoOut'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 188
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/MemoryData.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/memoriaDatos File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 195
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'direccion_out'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/MEM_WB.v(12).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/MEM_WB File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 206
+add wave -position insertpoint  \
+sim:/coreTB/DUT/clk \
+sim:/coreTB/DUT/pc_in \
+sim:/coreTB/DUT/reset_pc \
+sim:/coreTB/DUT/addr_instruccion_in \
+sim:/coreTB/DUT/addr_instruccion_out \
+sim:/coreTB/DUT/addr_instruccion_to_mux \
+sim:/coreTB/DUT/instruccion_a_buff \
+sim:/coreTB/DUT/out_instruccion \
+sim:/coreTB/DUT/OP \
+sim:/coreTB/DUT/RegDest \
+sim:/coreTB/DUT/RegWrite \
+sim:/coreTB/DUT/writeEn \
+sim:/coreTB/DUT/ALUOp \
+sim:/coreTB/DUT/ALUSrc \
+sim:/coreTB/DUT/branch \
+sim:/coreTB/DUT/MemRead \
+sim:/coreTB/DUT/MemWrite \
+sim:/coreTB/DUT/Mem_to_Reg \
+sim:/coreTB/DUT/AR1 \
+sim:/coreTB/DUT/AR2 \
+sim:/coreTB/DUT/AW \
+sim:/coreTB/DUT/SH \
+sim:/coreTB/DUT/inst_funcion \
+sim:/coreTB/DUT/destinoBr \
+sim:/coreTB/DUT/inst_inmediata \
+sim:/coreTB/DUT/inst_funcion_ex \
+sim:/coreTB/DUT/DRead1 \
+sim:/coreTB/DUT/DRead2 \
+sim:/coreTB/DUT/AWR \
+sim:/coreTB/DUT/Data_Reg \
+sim:/coreTB/DUT/A \
+sim:/coreTB/DUT/B \
+sim:/coreTB/DUT/AdrrDest1 \
+sim:/coreTB/DUT/AdrrDest2 \
+sim:/coreTB/DUT/alusrc_out \
+sim:/coreTB/DUT/sel_regDes \
+sim:/coreTB/DUT/opeAlu \
+sim:/coreTB/DUT/wb_ex_mem \
+sim:/coreTB/DUT/m_ex_mem \
+sim:/coreTB/DUT/selector \
+sim:/coreTB/DUT/operando_B \
+sim:/coreTB/DUT/resultadoALU \
+sim:/coreTB/DUT/ex_mem_addrDest \
+sim:/coreTB/DUT/ex_mem_branch \
+sim:/coreTB/DUT/WB_mem_wb \
+sim:/coreTB/DUT/memoryWrite \
+sim:/coreTB/DUT/memoryRead \
+sim:/coreTB/DUT/addr_to_memory \
+sim:/coreTB/DUT/dato_escribir \
+sim:/coreTB/DUT/addr_reg_mem_wb \
+sim:/coreTB/DUT/datoLeido \
+sim:/coreTB/DUT/branchToPC \
+sim:/coreTB/DUT/Dato_MemToReg \
+sim:/coreTB/DUT/Dato_leido1 \
+sim:/coreTB/DUT/Dato_leido2 \
+sim:/coreTB/DUT/MemToReg
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of NucleoTB.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.coreTB
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'pipeline'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/IF_ID.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/IF_ID File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 40
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (16) for port 'data_extend_in'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/ID_EX.v(16).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/ID_EX File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 104
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'dato'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_regDest File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 154
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'dato2'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_regDest File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 154
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'datoOut'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_regDest File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 154
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'AWriteMem_in'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/EX_MEM.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/EX_MEM File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 168
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'dato2'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 188
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'datoOut'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 188
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/MemoryData.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/memoriaDatos File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 195
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'direccion_out'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/MEM_WB.v(12).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/MEM_WB File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 206
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of Nucleo.v failed with 2 errors.
+# Compile of Nucleo.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.NucleoTop
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'pipeline'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/IF_ID.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/IF_ID File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 44
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (16) for port 'data_extend_in'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/ID_EX.v(16).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/ID_EX File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 108
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'dato'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_regDest File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 158
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'dato2'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_regDest File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 158
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'datoOut'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_regDest File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 158
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'AWriteMem_in'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/EX_MEM.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/EX_MEM File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 172
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'dato2'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'datoOut'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/MemoryData.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/memoriaDatos File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 199
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'direccion_out'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/MEM_WB.v(12).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/MEM_WB File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 210
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of ALU.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ALU
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'pipeline'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/IF_ID.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/IF_ID File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 44
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (16) for port 'data_extend_in'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/ID_EX.v(16).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/ID_EX File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 108
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'dato'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_regDest File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 158
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'dato2'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_regDest File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 158
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'datoOut'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_regDest File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 158
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'AWriteMem_in'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/EX_MEM.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/EX_MEM File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 172
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'dato2'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'datoOut'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/MemoryData.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/memoriaDatos File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 199
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'direccion_out'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/MEM_WB.v(12).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/MEM_WB File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 210
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run

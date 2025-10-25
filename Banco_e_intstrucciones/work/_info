@@ -1,0 +1,82 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Lenovo/Documents/UDG/ProyectosModelSim/BancoRegistros
+valu
+!s110 1759334521
+!i10b 1
+!s100 fZI2f94EaQ7L=^37;Ra@l1
+Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Ij2WLE@M`n:XTmIQg]XoaD2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/Lenovo/Documents/UDG/ProyectosModelSim/Banco_e_intstrucciones
+w1759333730
+8C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ALU/alu.v
+FC:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ALU/alu.v
+!i122 1
+L0 2 48
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1759334521.000000
+!s107 C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ALU/alu.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ALU/alu.v|
+!i113 1
+Z4 o-work work
+Z5 tCvgOpt 0
+vbank_regTB
+!s110 1759335654
+!i10b 1
+!s100 JB[hOI@;fJfDNzJmQEnQM1
+R0
+IZeIg]@klmnb[UhNM[;`1R2
+R1
+R2
+w1759284771
+8C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/BancoRegistros/bank_regTB.v
+FC:/Users/Lenovo/Documents/UDG/ProyectosModelSim/BancoRegistros/bank_regTB.v
+!i122 2
+L0 3 27
+R3
+r1
+!s85 0
+31
+!s108 1759335654.000000
+!s107 C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/BancoRegistros/bank_regTB.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/BancoRegistros/bank_regTB.v|
+!i113 1
+R4
+R5
+nbank_reg@t@b
+vmemInstru
+!s110 1759334306
+!i10b 1
+!s100 DMESGX82^Rod;FJ_<U@:G1
+R0
+I0E:;jAMAK:[l`>kQ:MH=N3
+R1
+R2
+w1759334300
+8C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/Banco_e_intstrucciones/MemInstruccion.v
+FC:/Users/Lenovo/Documents/UDG/ProyectosModelSim/Banco_e_intstrucciones/MemInstruccion.v
+!i122 0
+L0 1 12
+R3
+r1
+!s85 0
+31
+!s108 1759334306.000000
+!s107 C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/Banco_e_intstrucciones/MemInstruccion.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/Banco_e_intstrucciones/MemInstruccion.v|
+!i113 1
+R4
+R5
+nmem@instru

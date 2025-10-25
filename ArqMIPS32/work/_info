@@ -1,0 +1,440 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Lenovo/Documents/UDG/ProyectosModelSim/BancoRegistros
+vADD
+!s110 1761329994
+!i10b 1
+!s100 lT8lA93C3[AnRN@c1^KCW1
+Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IFJA7N;YmL=64C?L?Iol`?1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32
+w1760474232
+8C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/ADD.v
+FC:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/ADD.v
+!i122 89
+L0 1 10
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1761329994.000000
+!s107 C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/ADD.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/ADD.v|
+!i113 1
+Z4 o-work work
+Z5 tCvgOpt 0
+n@a@d@d
+vALU
+!s110 1761370063
+!i10b 1
+!s100 zYP81GCiLofTDelUcfG1f1
+R0
+I?HkDnco?0onI<_[EPAIYb0
+R1
+R2
+w1761370056
+8C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/ALU.v
+FC:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/ALU.v
+!i122 123
+L0 22 40
+R3
+r1
+!s85 0
+31
+!s108 1761370063.000000
+!s107 C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/ALU.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/ALU.v|
+!i113 1
+R4
+R5
+n@a@l@u
+vALUcontrol
+Z6 !s110 1761329996
+!i10b 1
+!s100 Hi;<dQbSbLJ7f]L19zKnO1
+R0
+I8DEcH6R?Cg3>FQ0?cP?A72
+R1
+R2
+w1761276111
+8C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/ALUcontrol.v
+FC:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/ALUcontrol.v
+!i122 95
+L0 1 54
+R3
+r1
+!s85 0
+31
+Z7 !s108 1761329996.000000
+!s107 C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/ALUcontrol.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/ALUcontrol.v|
+!i113 1
+R4
+R5
+n@a@l@ucontrol
+vbuffer
+Z8 !s110 1761329998
+!i10b 1
+!s100 Ko3EUR9dJaPT`]A;2CO5_2
+R0
+IXz2EQ?VPiiniWW2<BDIDd2
+R1
+R2
+w1760974139
+8C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Buff.v
+FC:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Buff.v
+!i122 100
+L0 1 14
+R3
+r1
+!s85 0
+31
+Z9 !s108 1761329998.000000
+!s107 C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Buff.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Buff.v|
+!i113 1
+R4
+R5
+vControl
+!s110 1761366330
+!i10b 1
+!s100 md;FB9]QP?A=7]aP0b?7Q0
+R0
+I;fTHNijb]J9ShRi483FYd0
+R1
+R2
+w1761366311
+8C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/UnidadControl.v
+FC:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/UnidadControl.v
+!i122 117
+L0 1 65
+R3
+r1
+!s85 0
+31
+!s108 1761366329.000000
+!s107 C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/UnidadControl.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/UnidadControl.v|
+!i113 1
+R4
+R5
+n@control
+vcoreTB
+!s110 1761368777
+!i10b 1
+!s100 S?jgl9b:Wif716R<Jdg6V2
+R0
+IOf4aRUIzmH2C[hKJoE_jd1
+R1
+R2
+w1761368768
+8C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/NucleoTB.v
+FC:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/NucleoTB.v
+!i122 121
+L0 2 37
+R3
+r1
+!s85 0
+31
+!s108 1761368777.000000
+!s107 C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/NucleoTB.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/NucleoTB.v|
+!i113 1
+R4
+R5
+ncore@t@b
+vdesplazar
+Z10 !s110 1761329997
+!i10b 1
+!s100 K=R=@^j;I5nmM2Ej8O4`O1
+R0
+Ia^N^fZ3fZe^kn=K7H]YLi2
+R1
+R2
+w1761261871
+8C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/desplazador.v
+FC:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/desplazador.v
+!i122 98
+L0 1 11
+R3
+r1
+!s85 0
+31
+Z11 !s108 1761329997.000000
+!s107 C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/desplazador.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/desplazador.v|
+!i113 1
+R4
+R5
+vEX_MEM
+!s110 1761368216
+!i10b 1
+!s100 ?>M>]bINnmNaT3ZZ3e5aQ3
+R0
+I?@4MbHZ3A]61oe=84Shj50
+R1
+R2
+w1761368185
+8C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/EX_MEM.v
+FC:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/EX_MEM.v
+!i122 120
+L0 1 37
+R3
+r1
+!s85 0
+31
+!s108 1761368216.000000
+!s107 C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/EX_MEM.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/EX_MEM.v|
+!i113 1
+R4
+R5
+n@e@x_@m@e@m
+vID_EX
+!s110 1761367597
+!i10b 1
+!s100 Eb8abV7I]JQ?G[nD8;[X=1
+R0
+IECB<R6m0;`zLkH;h[DbC52
+R1
+R2
+w1761367279
+8C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/ID_EX.v
+FC:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/ID_EX.v
+!i122 118
+L0 1 42
+R3
+r1
+!s85 0
+31
+!s108 1761367597.000000
+!s107 C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/ID_EX.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/ID_EX.v|
+!i113 1
+R4
+R5
+n@i@d_@e@x
+vIF_ID
+R8
+!i10b 1
+!s100 n?GY<cgBh>iJKiVPX?Tz32
+R0
+IRX^PR6WIg5d6FPge86Wg]0
+R1
+R2
+w1761148844
+8C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/IF_ID.v
+FC:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/IF_ID.v
+!i122 101
+L0 1 17
+R3
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/IF_ID.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/IF_ID.v|
+!i113 1
+R4
+R5
+n@i@f_@i@d
+vMEM_WB
+!s110 1761330000
+!i10b 1
+!s100 Wd113ZSazXh>_0o2ODAYU3
+R0
+IIoXZSA80OQOY52jWze?Vb3
+R1
+R2
+w1761281184
+8C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/MEM_WB.v
+FC:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/MEM_WB.v
+!i122 106
+Z12 L0 1 25
+R3
+r1
+!s85 0
+31
+!s108 1761330000.000000
+!s107 C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/MEM_WB.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/MEM_WB.v|
+!i113 1
+R4
+R5
+n@m@e@m_@w@b
+vmemoriaDatos
+R6
+!i10b 1
+!s100 YQhedj]=cBUO<[6ZdZ`[92
+R0
+I<D@Q7BPi;`Y]FeSo5Ee3k2
+R1
+R2
+w1760977992
+8C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/MemoryData.v
+FC:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/MemoryData.v
+!i122 94
+L0 1 23
+R3
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/MemoryData.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/MemoryData.v|
+!i113 1
+R4
+R5
+nmemoria@datos
+vmemoryInstructions
+!s110 1761330630
+!i10b 1
+!s100 cZ?MgRb9f>J2aekbj^ljH1
+R0
+IFfZlDQA0GIhA4g?BIEgDL2
+R1
+R2
+w1761330508
+8C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/memInstrucciones.v
+FC:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/memInstrucciones.v
+!i122 108
+Z13 L0 1 18
+R3
+r1
+!s85 0
+31
+!s108 1761330630.000000
+!s107 C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/memInstrucciones.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/memInstrucciones.v|
+!i113 1
+R4
+R5
+nmemory@instructions
+vMUX
+R6
+!i10b 1
+!s100 d_d1mn4iUQYnEV[2CedPc2
+R0
+I0AGJnC@77n9Sao7kUkAZQ1
+R1
+R2
+w1760631507
+8C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v
+FC:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v
+!i122 96
+R12
+R3
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v|
+!i113 1
+R4
+R5
+n@m@u@x
+vNucleoTop
+!s110 1761369240
+!i10b 1
+!s100 1ccNdo7]MzJJV=CJoQz083
+R0
+IJeHCP2OjDWZLLFXcXHWJi3
+R1
+R2
+w1761369231
+8C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v
+FC:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v
+!i122 122
+L0 1 228
+R3
+r1
+!s85 0
+31
+!s108 1761369240.000000
+!s107 C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v|
+!i113 1
+R4
+R5
+n@nucleo@top
+vPC
+Z14 !s110 1761329995
+!i10b 1
+!s100 Kc<E8L_S2ih]J0Z4ULOml3
+R0
+ID?[>4dlXB;JGE[AN^``P?1
+R1
+R2
+w1761148656
+8C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/contador.v
+FC:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/contador.v
+!i122 92
+R13
+R3
+r1
+!s85 0
+31
+Z15 !s108 1761329995.000000
+!s107 C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/contador.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/contador.v|
+!i113 1
+R4
+R5
+n@p@c
+vRegistros
+R14
+!i10b 1
+!s100 80`7ijnkc<VV2=2`:L@]D1
+R0
+Ic=52Yi5A<6eM=l_=1WcAB0
+R1
+R2
+w1761329987
+8C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Registros.v
+FC:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Registros.v
+!i122 91
+L0 20 29
+R3
+r1
+!s85 0
+31
+R15
+!s107 C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Registros.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Registros.v|
+!i113 1
+R4
+R5
+n@registros
+vsumador
+R10
+!i10b 1
+!s100 AD=FQ^gb=JV3PdYlF1g<N2
+R0
+IKkl40Z<Q;Bk:8o3h?aWFo1
+R1
+R2
+w1761148669
+8C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/sumador.v
+FC:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/sumador.v
+!i122 97
+L0 1 13
+R3
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/sumador.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/sumador.v|
+!i113 1
+R4
+R5

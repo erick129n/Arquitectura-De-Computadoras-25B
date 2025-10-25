@@ -1,0 +1,49 @@
+`timescale 1ns/1ns
+module alu (
+    input [3:0] a,
+    input [3:0] b,
+    input [3:0] sel,
+    output reg [3:0] s,
+    output reg overflow
+    
+
+);
+
+reg signed [7:0] result_extended;
+always @(sel) begin 
+    case (sel)
+    4'd0:
+        begin
+            s = a + b;
+        end
+    4'd1:
+        begin
+            s = a & b;
+        end
+    4'd2:
+        begin
+            s = a == b;
+        end
+    4'd3:
+        begin
+            s = a > b;
+        end
+    4'd4:
+        begin
+            s = a << 1;
+        end
+    4'd5:
+        begin
+            s = a >> 1;
+        end
+    4'd6:
+        begin
+            result_extended = a * b;
+            s = result_extended[3:0];
+        end
+    endcase
+    overflow = (result_extended[7:4] != {4{result_extended[3]}});
+end
+
+
+endmodule

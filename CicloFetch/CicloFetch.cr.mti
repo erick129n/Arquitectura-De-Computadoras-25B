@@ -1,0 +1,64 @@
+C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/CicloFetch/ALU.v {1 {vlog -work work -stats=none C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/CicloFetch/ALU.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}} C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/CicloFetch/Registros.v {1 {vlog -work work -stats=none C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/CicloFetch/Registros.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Registros
+
+Top level modules:
+	Registros
+
+} {} {}} C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/CicloFetch/CicleFecth.v {1 {vlog -work work -stats=none C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/CicloFetch/CicleFecth.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module fetch
+
+Top level modules:
+	fetch
+
+} {} {}} C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/CicloFetch/Buff.v {1 {vlog -work work -stats=none C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/CicloFetch/Buff.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module buffer
+
+Top level modules:
+	buffer
+
+} {} {}} C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/CicloFetch/Banco.v {1 {vlog -work work -stats=none C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/CicloFetch/Banco.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Banco
+
+Top level modules:
+	Banco
+
+} {} {}} C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/CicloFetch/PC.v {1 {vlog -work work -stats=none C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/CicloFetch/PC.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module PC
+
+Top level modules:
+	PC
+
+} {} {}} C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/CicloFetch/InstruccionesTB.v {1 {vlog -work work -stats=none C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/CicloFetch/InstruccionesTB.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module InstruccionesTB
+
+Top level modules:
+	InstruccionesTB
+
+} {} {}} C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/CicloFetch/memInstrucciones.v {1 {vlog -work work -stats=none C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/CicloFetch/memInstrucciones.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module memoryInstructions
+
+Top level modules:
+	memoryInstructions
+
+} {} {}} C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/CicloFetch/fetchTB.v {1 {vlog -work work -stats=none C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/CicloFetch/fetchTB.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module fetchTB
+
+Top level modules:
+	fetchTB
+
+} {} {}}

@@ -1,0 +1,558 @@
+# Compile of bank_regTB.v was successful.
+vsim work.bank_regTB
+# vsim work.bank_regTB 
+# Start time: 10:21:46 on Oct 01,2025
+# Loading work.bank_regTB
+# Loading work.reg_bank
+vsim work.BR_TB
+# End time: 10:22:13 on Oct 01,2025, Elapsed time: 0:00:27
+# Errors: 0, Warnings: 2
+# vsim work.BR_TB 
+# Start time: 10:22:13 on Oct 01,2025
+# Loading work.BR_TB
+# Loading work.BR
+# Loading work.reg_bank
+# Loading work.alu
+run
+run
+run
+run
+run
+restart
+add wave -position insertpoint  \
+sim:/BR_TB/control_bus
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+restart
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+# ** Note: $stop    : C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/BancoRegistros/BR_TB.v(37)
+#    Time: 400 ns  Iteration: 0  Instance: /BR_TB
+# Break in Module BR_TB at C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/BancoRegistros/BR_TB.v line 37
+# Compile of alu.v was successful.
+# Compile of alu.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.alu
+restart
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+# Compile of BR_TB.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.BR_TB
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+# Compile of BR_TB.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.BR_TB
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+restart
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+restart
+# Compile of BR.v was successful.
+# Compile of BR_TB.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.BR_TB
+# Loading work.BR
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+# Compile of bank_reg.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.reg_bank
+# Compile of bank_reg.v was successful.
+# Compile of bank_regTB.v was successful.
+# Compile of BR.v was successful.
+# Compile of BR_TB.v was successful.
+# Compile of alu.v was successful.
+# 5 compiles, 1 failed with no errors.
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+# Compile of bank_reg.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.BR_TB
+# Loading work.BR
+# Loading work.reg_bank
+# Loading work.alu
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+restart
+# Compile of bank_reg.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.reg_bank
+add wave -position insertpoint  \
+sim:/BR_TB/DUT/inst_reg/AR1
+add wave -position insertpoint  \
+sim:/BR_TB/DUT/inst_reg/AR2
+add wave -position insertpoint  \
+sim:/BR_TB/DUT/inst_alu/s
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+add wave -position insertpoint  \
+sim:/BR_TB/DUT/inst_alu/a
+add wave -position insertpoint  \
+sim:/BR_TB/DUT/inst_alu/a
+restart
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+# Compile of alu.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.alu
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# ** Note: $stop    : C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/BancoRegistros/BR_TB.v(37)
+#    Time: 500 ns  Iteration: 0  Instance: /BR_TB
+# Break in Module BR_TB at C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/BancoRegistros/BR_TB.v line 37
+run
+run
+add wave -position insertpoint  \
+sim:/BR_TB/DUT/inst_alu/b
+restart
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of bank_reg.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.reg_bank
+restart
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of BR_TB.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.BR_TB
+restart
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# ** Note: $stop    : C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/BancoRegistros/BR_TB.v(37)
+#    Time: 500 ns  Iteration: 0  Instance: /BR_TB
+# Break in Module BR_TB at C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/BancoRegistros/BR_TB.v line 37
+run
+run
+# Compile of bank_reg.v was successful.
+# Compile of BR.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.BR
+# Loading work.reg_bank
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# ** Note: $stop    : C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/BancoRegistros/BR_TB.v(37)
+#    Time: 500 ns  Iteration: 0  Instance: /BR_TB
+# Break in Module BR_TB at C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/BancoRegistros/BR_TB.v line 37
+# Compile of bank_regTB.v was successful.
+vsim work.bank_regTB
+# End time: 07:11:35 on Oct 02,2025, Elapsed time: 20:49:22
+# Errors: 0, Warnings: 2
+# vsim work.bank_regTB 
+# Start time: 07:11:36 on Oct 02,2025
+# Loading work.bank_regTB
+# Loading work.reg_bank
+add wave -position insertpoint  \
+sim:/bank_regTB/ar1 \
+sim:/bank_regTB/ar2 \
+sim:/bank_regTB/aw \
+sim:/bank_regTB/dIn \
+sim:/bank_regTB/writeReg \
+sim:/bank_regTB/dr1 \
+sim:/bank_regTB/dr2
+run
+# Compile of bank_regTB.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.bank_regTB
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+# ** Note: $stop    : C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/BancoRegistros/bank_regTB.v(28)
+#    Time: 200 ns  Iteration: 0  Instance: /bank_regTB
+# Break in Module bank_regTB at C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/BancoRegistros/bank_regTB.v line 28
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of alu_tb.v was successful.
+vsim work.aluTB
+# End time: 13:20:34 on Oct 03,2025, Elapsed time: 30:08:58
+# Errors: 0, Warnings: 3
+# vsim work.aluTB 
+# Start time: 13:20:34 on Oct 03,2025
+# Loading work.aluTB
+# Loading work.alu
+# A time value could not be extracted from the current line
+add wave -position insertpoint  \
+sim:/aluTB/A \
+sim:/aluTB/B \
+sim:/aluTB/selTb \
+sim:/aluTB/out \
+sim:/aluTB/over
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# ** Note: $stop    : C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ALU/alu_tb.v(35)
+#    Time: 700 ns  Iteration: 0  Instance: /aluTB
+# Break in Module aluTB at C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ALU/alu_tb.v line 35
+run
+run
+run
+run
+vsim work.BR_TB
+# End time: 13:24:10 on Oct 03,2025, Elapsed time: 0:03:36
+# Errors: 0, Warnings: 1
+# vsim work.BR_TB 
+# Start time: 13:24:10 on Oct 03,2025
+# Loading work.BR_TB
+# Loading work.BR
+# Loading work.reg_bank
+# Loading work.alu
+add wave -position insertpoint  \
+sim:/BR_TB/control_bus
+run
+run
+run
+run
+add wave -position insertpoint  \
+sim:/BR_TB/DUT/inst_reg/DataIn
+add wave -position insertpoint  \
+sim:/BR_TB/DUT/inst_reg/AR2
+add wave -position insertpoint  \
+sim:/BR_TB/DUT/inst_reg/AR1
+add wave -position insertpoint  \
+sim:/BR_TB/DUT/inst_reg/Awrite
+add wave -position insertpoint  \
+sim:/BR_TB/DUT/inst_alu/s
+add wave -position insertpoint  \
+sim:/BR_TB/DUT/inst_alu/a
+add wave -position insertpoint  \
+sim:/BR_TB/DUT/inst_alu/b
+add wave -position insertpoint  \
+sim:/BR_TB/DUT/inst_alu/sel
+restart
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# ** Note: $stop    : C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/BancoRegistros/BR_TB.v(37)
+#    Time: 500 ns  Iteration: 0  Instance: /BR_TB
+# Break in Module BR_TB at C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/BancoRegistros/BR_TB.v line 37
+run
+# Compile of alu.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.alu
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+restart
+# Compile of BR_TB.v was successful.
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.BR_TB
+# Compile of BR.v was successful.
+# Compile of BR_TB.v was successful.
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+# A time value could not be extracted from the current line
+run
+run
+run
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.BR_TB
+# Loading work.BR
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of bank_reg.v was successful with warnings.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.reg_bank
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+restart
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# End time: 16:15:45 on Oct 03,2025, Elapsed time: 2:51:35
+# Errors: 0, Warnings: 1

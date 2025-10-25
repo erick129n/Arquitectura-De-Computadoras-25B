@@ -1,0 +1,37 @@
+C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ALU/alu_tb.v {1 {vlog -work work -stats=none C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ALU/alu_tb.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module aluTB
+
+Top level modules:
+	aluTB
+
+} {} {}} C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/BancoRegistros/BR.v {1 {vlog -work work -stats=none C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/BancoRegistros/BR.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module BR
+
+Top level modules:
+	BR
+
+} {} {}} C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/BancoRegistros/bank_reg.v {2 {vlog -work work -stats=none C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/BancoRegistros/bank_reg.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module reg_bank
+** Warning: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/BancoRegistros/bank_reg.v(22): (vlog-2182) 'Banco' might be read before written in always_comb or always @* block.
+
+Top level modules:
+	reg_bank
+
+} {} {}} C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/BancoRegistros/bank_regTB.v {1 {vlog -work work -stats=none C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/BancoRegistros/bank_regTB.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module bank_regTB
+
+Top level modules:
+	bank_regTB
+
+} {} {}} C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ALU/alu.v {1 {vlog -work work -stats=none {C:\Users\Lenovo\Documents\UDG\ProyectosModelSim\ALU\alu.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module alu
+
+Top level modules:
+	alu
+
+} {} {}}

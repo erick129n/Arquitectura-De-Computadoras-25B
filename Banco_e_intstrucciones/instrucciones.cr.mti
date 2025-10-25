@@ -1,0 +1,22 @@
+C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/Banco_e_intstrucciones/MemInstruccion.v {1 {vlog -work work -stats=none C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/Banco_e_intstrucciones/MemInstruccion.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module memInstru
+
+Top level modules:
+	memInstru
+
+} {} {}} C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/BancoRegistros/bank_regTB.v {1 {vlog -work work -stats=none C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/BancoRegistros/bank_regTB.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module bank_regTB
+
+Top level modules:
+	bank_regTB
+
+} {} {}} C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ALU/alu.v {1 {vlog -work work -stats=none C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ALU/alu.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module alu
+
+Top level modules:
+	alu
+
+} {} {}}

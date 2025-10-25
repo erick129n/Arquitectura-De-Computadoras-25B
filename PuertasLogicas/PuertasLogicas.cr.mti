@@ -1,0 +1,18 @@
+C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/PuertasLogicas/Puertas_TB.v {1 {vlog -work work -stats=none C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/PuertasLogicas/Puertas_TB.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module testbench_puertas
+
+Top level modules:
+	testbench_puertas
+
+} {} {}} C:/Users/Lenovo/Downloads/PuertasLogicas.v {2 {vlog -work work -stats=none {C:\Users\Lenovo\Downloads\PuertasLogicas.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module puertas
+** Warning: C:\Users\Lenovo\Downloads\PuertasLogicas.v(18): (vlog-2283) Extra semicolon in $unit (global) scope.
+** Warning: C:\Users\Lenovo\Downloads\PuertasLogicas.v(19): (vlog-2284) Empty $unit scope found.
+-- Compiling package PuertasLogicas_v_unit
+
+Top level modules:
+	puertas
+
+} {} {}}
