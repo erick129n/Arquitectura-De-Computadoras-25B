@@ -165,33 +165,17 @@ def abrir_archivo():
         messagebox.showerror("Error", f"Error inesperado al abrir el archivo:\n{str(e)}")
 
 def exportar_a_archivo():
-    """Exporta el contenido con opción de sobrescribir o crear nuevo archivo."""
+    """Exporta el contenido del campo Memoria a un archivo."""
     contenido_memoria = memoria_text.get("1.0", tk.END).strip()
-    contenido_ensamblador = in_assembly.get("1.0", tk.END).strip()
     
-    if not contenido_memoria and not contenido_ensamblador:
-        messagebox.showwarning("Advertencia", "No hay contenido para exportar")
+    if not contenido_memoria:
+        messagebox.showwarning("Advertencia", "No hay contenido en Memoria para exportar")
         return
-    
-    # Preguntar qué contenido exportar
-    if contenido_memoria and contenido_ensamblador:
-        opcion = messagebox.askquestion(
-            "Seleccionar contenido",
-            "¿Qué contenido desea exportar?\n\n"
-            "Sí: Memoria (binario en bytes)\n"
-            "No: Código ensamblador",
-            icon='question'
-        )
-        contenido = contenido_memoria if opcion == 'yes' else contenido_ensamblador
-        tipo_contenido = "memoria" if opcion == 'yes' else "ensamblador"
-    else:
-        contenido = contenido_memoria if contenido_memoria else contenido_ensamblador
-        tipo_contenido = "memoria" if contenido_memoria else "ensamblador"
     
     # Preguntar si sobrescribir o crear nuevo
     opcion_guardar = messagebox.askyesno(
         "Guardar archivo",
-        f"¿Desea seleccionar un archivo existente para sobrescribir?\n\n"
+        "¿Desea seleccionar un archivo existente para sobrescribir?\n\n"
         "Sí: Seleccionar archivo existente para sobrescribir\n"
         "No: Crear nuevo archivo"
     )
@@ -199,16 +183,16 @@ def exportar_a_archivo():
     if opcion_guardar:
         # Sobrescribir archivo existente
         archivo = filedialog.askopenfilename(
-            title=f"Seleccionar archivo para sobrescribir ({tipo_contenido})",
+            title="Seleccionar archivo para sobrescribir (Memoria)",
             filetypes=[("Archivos de texto", "*.txt"), ("Todos los archivos", "*.*")]
         )
     else:
         # Crear nuevo archivo
         archivo = filedialog.asksaveasfilename(
-            title=f"Guardar como nuevo archivo ({tipo_contenido})",
+            title="Guardar como nuevo archivo (Memoria)",
             defaultextension=".txt",
             filetypes=[("Archivos de texto", "*.txt"), ("Todos los archivos", "*.*")],
-            initialfile=f"instrucciones_{tipo_contenido}.txt"
+            initialfile="memoria_instrucciones.txt"
         )
     
     if not archivo:
@@ -226,9 +210,9 @@ def exportar_a_archivo():
         
         # Guardar el archivo
         with open(archivo, "w", encoding="utf-8") as f:
-            f.write(contenido)
+            f.write(contenido_memoria)
         
-        messagebox.showinfo("Éxito", f"Archivo guardado en:\n{archivo}")
+        messagebox.showinfo("Éxito", f"Contenido de Memoria guardado en:\n{archivo}")
         
     except PermissionError:
         messagebox.showerror("Error", "No tiene permisos para guardar en esta ubicación")
@@ -311,6 +295,7 @@ def convertir():
         memoria_text.insert(tk.END, binario_en_bytes + "\n")
 
 def binario_a_ensamblador():
+    """Convierte el contenido de Instrucción convertida (binario) a ensamblador"""
     # Obtener el texto binario del campo de instrucción convertida
     texto_binario = instruccion_convertida_text.get("1.0", tk.END).strip()
     
@@ -455,10 +440,10 @@ abrir_button.pack(pady=5)
 convertir_button = ttk.Button(button_frame, text="Convertir", command=convertir)
 convertir_button.pack(pady=5)
 
-exportar_button = ttk.Button(button_frame, text="Exportar a archivo", command=exportar_a_archivo)
+exportar_button = ttk.Button(button_frame, text="Exportar Memoria", command=exportar_a_archivo)
 exportar_button.pack(pady=5)
 
-convertir_binario_assembly = ttk.Button(button_frame, text="Convertir Binario a Ensamblador", command=binario_a_ensamblador)
+convertir_binario_assembly = ttk.Button(button_frame, text="Binario a Ensamblador", command=binario_a_ensamblador)
 convertir_binario_assembly.pack(pady=5)
 
 # Información sobre instrucciones soportadas
@@ -467,7 +452,7 @@ info_label = tk.Label(button_frame, text="\nInstrucciones soportadas:\nTipo R: A
 info_label.pack(pady=10)
 
 # Campo de salida - Instrucción convertida
-instruccion_convertida_label = tk.Label(scrollable_frame, text="Instrucción convertida:")
+instruccion_convertida_label = tk.Label(scrollable_frame, text="Instrucción convertida (32 bits):")
 instruccion_convertida_label.grid(row=2, column=0, sticky="w", padx=20, pady=(5, 2))
 
 # Frame para el cuadro de texto de instrucción convertida con scrollbar
@@ -482,7 +467,7 @@ instruccion_convertida_text.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
 instruccion_scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
 
 # Campo de memoria
-memoria_label = tk.Label(scrollable_frame, text="Memoria:")
+memoria_label = tk.Label(scrollable_frame, text="Memoria (bytes):")
 memoria_label.grid(row=2, column=1, sticky="w", padx=20, pady=(10, 5))
 
 # Frame para el cuadro de texto de memoria con scrollbar
