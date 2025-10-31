@@ -111,38 +111,112 @@ def parsear_instruccion_memoria(datos):
     
     rt = datos[0]
 
-    # CORRECCIÓN: Faltaba coma después del patrón regex
     match = re.match(r'(\-?\d+)\((\d+)\)', datos[1])
     if match:
         offset = match.group(1)
         rs = match.group(2)
         return rt, rs, offset
     else:
-        # Intentar formato alternativo sin paréntesis
         if len(datos) >= 3:
-            return datos[0], datos[2], datos[1]  # rt, rs, offset
+            return datos[0], datos[2], datos[1]
     return None, None, None
 
-# Función para exportar a archivo
-def exportar_a_archivo():
-    contenido = memoria_text.get("1.0", tk.END).strip()
-    
-    if not contenido:
-        messagebox.showwarning("Advertencia", "No hay contenido para exportar")
-        return
-    
-    archivo = filedialog.asksaveasfilename(
-        title="Guardar instrucciones",
-        defaultextension=".txt",
-        filetypes=[("Archivos de texto", "*.txt"), ("Todos los archivos", "*.*")],
-        initialfile="instrucciones_convertidas.txt"
+# ---------------------------------
+# Funciones para manejar archivos
+# ---------------------------------
+
+def abrir_archivo():
+    """Abre un archivo existente y pregunta si cargar los datos al programa."""
+    archivo = filedialog.askopenfilename(
+        title="Abrir archivo",
+        filetypes=[("Archivos de texto", "*.txt"), ("Todos los archivos", "*.*")]
     )
     
     if not archivo:
         return
     
     try:
-        if os.path.exists(archivo):
+        with open(archivo, "r", encoding="utf-8") as f:
+            contenido = f.read().strip()
+        
+        if not contenido:
+            messagebox.showwarning("Advertencia", "El archivo está vacío")
+            return
+        
+        # Preguntar si cargar los datos al programa
+        respuesta = messagebox.askyesno(
+            "Cargar archivo",
+            f"¿Desea cargar el contenido del archivo '{os.path.basename(archivo)}' al programa?\n\n"
+            "Nota: Esto reemplazará el contenido actual en el campo de ensamblador."
+        )
+        
+        if respuesta:
+            in_assembly.delete("1.0", tk.END)
+            in_assembly.insert("1.0", contenido)
+            messagebox.showinfo("Éxito", "Archivo cargado correctamente")
+        
+    except FileNotFoundError:
+        messagebox.showerror("Error", "El archivo no fue encontrado")
+    except PermissionError:
+        messagebox.showerror("Error", "No tiene permisos para leer este archivo")
+    except UnicodeDecodeError:
+        messagebox.showerror("Error", "Error al leer el archivo. Formato no compatible")
+    except Exception as e:
+        messagebox.showerror("Error", f"Error inesperado al abrir el archivo:\n{str(e)}")
+
+def exportar_a_archivo():
+    """Exporta el contenido con opción de sobrescribir o crear nuevo archivo."""
+    contenido_memoria = memoria_text.get("1.0", tk.END).strip()
+    contenido_ensamblador = in_assembly.get("1.0", tk.END).strip()
+    
+    if not contenido_memoria and not contenido_ensamblador:
+        messagebox.showwarning("Advertencia", "No hay contenido para exportar")
+        return
+    
+    # Preguntar qué contenido exportar
+    if contenido_memoria and contenido_ensamblador:
+        opcion = messagebox.askquestion(
+            "Seleccionar contenido",
+            "¿Qué contenido desea exportar?\n\n"
+            "Sí: Memoria (binario en bytes)\n"
+            "No: Código ensamblador",
+            icon='question'
+        )
+        contenido = contenido_memoria if opcion == 'yes' else contenido_ensamblador
+        tipo_contenido = "memoria" if opcion == 'yes' else "ensamblador"
+    else:
+        contenido = contenido_memoria if contenido_memoria else contenido_ensamblador
+        tipo_contenido = "memoria" if contenido_memoria else "ensamblador"
+    
+    # Preguntar si sobrescribir o crear nuevo
+    opcion_guardar = messagebox.askyesno(
+        "Guardar archivo",
+        f"¿Desea seleccionar un archivo existente para sobrescribir?\n\n"
+        "Sí: Seleccionar archivo existente para sobrescribir\n"
+        "No: Crear nuevo archivo"
+    )
+    
+    if opcion_guardar:
+        # Sobrescribir archivo existente
+        archivo = filedialog.askopenfilename(
+            title=f"Seleccionar archivo para sobrescribir ({tipo_contenido})",
+            filetypes=[("Archivos de texto", "*.txt"), ("Todos los archivos", "*.*")]
+        )
+    else:
+        # Crear nuevo archivo
+        archivo = filedialog.asksaveasfilename(
+            title=f"Guardar como nuevo archivo ({tipo_contenido})",
+            defaultextension=".txt",
+            filetypes=[("Archivos de texto", "*.txt"), ("Todos los archivos", "*.*")],
+            initialfile=f"instrucciones_{tipo_contenido}.txt"
+        )
+    
+    if not archivo:
+        return
+    
+    try:
+        # Verificar si el archivo ya existe (para el caso de crear nuevo)
+        if not opcion_guardar and os.path.exists(archivo):
             respuesta = messagebox.askyesno(
                 "Archivo existente", 
                 f"El archivo '{os.path.basename(archivo)}' ya existe.\n¿Desea sobrescribirlo?"
@@ -150,6 +224,7 @@ def exportar_a_archivo():
             if not respuesta:
                 return
         
+        # Guardar el archivo
         with open(archivo, "w", encoding="utf-8") as f:
             f.write(contenido)
         
@@ -216,7 +291,6 @@ def convertir():
             rt, rs, offset = parsear_instruccion_memoria(datos)
 
             if rt is None or rs is None or offset is None:
-                # CORRECCIÓN: Typo en "inválido"
                 messagebox.showerror("Error", f"Formato inválido para {instruccion}. Use: {instruccion} $t, offset($s)")
                 continue
 
@@ -374,6 +448,9 @@ in_assembly_scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
 # Botones
 button_frame = tk.Frame(scrollable_frame)
 button_frame.grid(row=1, column=1, padx=20, pady=(0, 10))
+
+abrir_button = ttk.Button(button_frame, text="Abrir Archivo", command=abrir_archivo)
+abrir_button.pack(pady=5)
 
 convertir_button = ttk.Button(button_frame, text="Convertir", command=convertir)
 convertir_button.pack(pady=5)
