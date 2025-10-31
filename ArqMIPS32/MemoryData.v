@@ -1,5 +1,5 @@
 module memoriaDatos
-	#(parameter SIZE = 32, SIZE_MEM = 256)
+	#(parameter SIZE = 32, SIZE_MEM = 512)
 	(
 	input[SIZE-1:0] address,
 	input[SIZE-1:0] dato,
@@ -11,7 +11,7 @@ module memoriaDatos
 
 reg[SIZE-1:0] memory [0:SIZE_MEM-1];
 
-always@* begin
+always@(MemWrite, MemRead) begin
 	if(MemWrite) begin
 		memory[address] = dato;
 	end

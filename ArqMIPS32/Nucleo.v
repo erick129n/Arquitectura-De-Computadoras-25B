@@ -19,6 +19,7 @@ module NucleoTop#(parameter SIZE_DATA = 32,
 	wire [SIZE_DATA-1: 0] instruccion_a_buff, out_instruccion;
 
 	// ELIMINAR ESTA LÍNEA: assign addr_instruccion_in = pc_in;
+	assign addr_instruccion_to_mux = addr_instruccion_in;
 
 	PC PC(
 	  .clk(clk),
@@ -43,7 +44,6 @@ module NucleoTop#(parameter SIZE_DATA = 32,
 	
 	IF_ID IF_ID(
 		.clk(clk),
-		.pipeline(0),
 		.data_in(instruccion_a_buff),
 		.data_in2(32'b0),
 		.data_out(out_instruccion),
@@ -113,7 +113,7 @@ module NucleoTop#(parameter SIZE_DATA = 32,
 		.data_in(DRead1),
 		.data_in2(DRead2),
 		.data_in3(),
-		.data_extend_in(inst_inmediata),
+		.data_extend_in({16'b0, inst_inmediata}),
 		.adrWrite1(AR2),
 		.adrWrite2(AW),
 		.funcion_in(inst_funcion),
@@ -155,7 +155,7 @@ module NucleoTop#(parameter SIZE_DATA = 32,
 	
 	wire [SIZE_ADDR_BR-1:0] ex_mem_addrDest;
 	
-	MUX mux_regDest(
+	MUX #(.SIZE(5))mux_regDest(
 		.dato(AdrrDest2),
 		.dato2(AdrrDest1),
 		.sel(sel_regDes),
@@ -166,7 +166,7 @@ module NucleoTop#(parameter SIZE_DATA = 32,
 	wire [S_WB-1:0] WB_mem_wb;
 	wire memoryWrite;
 	wire memoryRead;
-	wire [SIZE_ADDR_BR-1:0]addr_to_memory;
+	wire [SIZE_DATA-1:0]addr_to_memory;
 	wire [SIZE_DATA-1:0] dato_escribir;
 	wire [SIZE_ADDR_BR-1:0] addr_reg_mem_wb;
 	EX_MEM EX_MEM(
@@ -180,8 +180,8 @@ module NucleoTop#(parameter SIZE_DATA = 32,
 		.WB_out(WB_mem_wb),
 		.M_out({ex_mem_branch, memoryWrite, memoryRead}),
 		.data_out(),
-		.data_out2(dato_escribir),
-		.AWriteMem(addr_to_memory),
+		.data_out2(addr_to_memory),
+		.AWriteMem(dato_escribir),
 		.AWriteReg(addr_reg_mem_wb)
 	);
 	wire [SIZE_DATA-1:0] datoLeido;
@@ -189,8 +189,8 @@ module NucleoTop#(parameter SIZE_DATA = 32,
 	wire branchToPC;
 	assign branchToPC = ex_mem_branch & 1'b0;
 	
-	MUX mux_branch(
-		.dato(32'b0),                    // ← Para el branch no implementado
+	MUX #(.SIZE(5))mux_branch(
+		.dato(8'b0),                    // ← Para el branch no implementado
 		.dato2(addr_instruccion_in),     // ← Del sumador (PC+4)
 		.sel(branchToPC),
 		.datoOut(addr_instruccion_to_mux)
@@ -220,8 +220,8 @@ module NucleoTop#(parameter SIZE_DATA = 32,
 	);
 	
 	MUX mux_MemoryToReg(
-		.dato(Dato_leido2),
-		.dato2(Dato_leido1),
+		.dato(Dato_leido1),
+		.dato2(Dato_leido2),
 		.sel(MemToReg),
 		.datoOut(Data_Reg)
 	);

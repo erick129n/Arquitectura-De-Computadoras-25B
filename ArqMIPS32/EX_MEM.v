@@ -8,13 +8,13 @@ module EX_MEM#(parameter SIZE = 32,
 		input [S_M-1:0]M,
 		input [SIZE-1:0] data_in,
 		input [SIZE-1:0] data_in2,
-		input [ADDR_SIZE-1:0] AWriteMem_in,
+		input [SIZE-1:0] AWriteMem_in,
 		input [ADDR_SIZE-1:0] AWriteReg_in,
 		output reg [S_WB-1:0] WB_out,
 		output reg [S_M-1:0] M_out,
 		output reg [SIZE-1:0] data_out,
 		output reg [SIZE-1:0] data_out2,
-		output reg [ADDR_SIZE-1:0] AWriteMem,
+		output reg [SIZE-1:0] AWriteMem,
 		output reg [ADDR_SIZE-1:0] AWriteReg
 	);
 

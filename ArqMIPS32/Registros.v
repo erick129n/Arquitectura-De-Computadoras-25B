@@ -18,7 +18,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module Registros
-	#(parameter S_AD = 5, S_DATA = 32)
+	#(parameter S_AD = 5, S_DATA = 32, DIRECCIONES=256)
 	(
     input [S_AD-1:0] ARead1,
     input [S_AD-1:0] ARead2,
@@ -30,7 +30,7 @@ module Registros
     );
 
 
-	reg[31:0] Registro [0:31];
+	reg[S_DATA-1:0] Registro [0:DIRECCIONES-1];
 	
 	initial begin
 		$readmemb("Datos.txt", Registro);

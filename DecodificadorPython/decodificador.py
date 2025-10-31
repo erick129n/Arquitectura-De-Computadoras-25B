@@ -1,10 +1,11 @@
 import tkinter as tk
-from tkinter import ttk, scrolledtext
+from tkinter import ttk, scrolledtext, filedialog
 import tkinter.messagebox as messagebox
 import os
+import re
 
 ventana = tk.Tk()
-ventana.title("Decodificador de Instrucciones MIPS Tipo R")
+ventana.title("Decodificador de Instrucciones MIPS Tipo R e Inmediatas")
 ventana.geometry("700x600")
 
 # Frame principal con scrollbar
@@ -29,8 +30,21 @@ scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
 
 # Diccionario de operaciones lógicas y aritméticas (funct)
 instruccion_logica_aritmetica = {
-    '100000': 'ADD', '100100': 'AND', 
-    '101010': 'MAQ', '100111': 'NOR', '100101': 'OR'
+    '100000': 'ADD', '100100': 'AND',
+    '100111': 'NOR', '100101': 'OR', '101010': 'SLT'
+}
+
+# Diccionario de instrucciones inmediatas (opcode)
+instruccion_logica_aritmetica_inmediata = {
+    '001000': 'ADDI', '001001': 'ADDIU', '001100': 'ANDI', 
+    '001101': 'ORI', '001110': 'XORI', '001010': 'SLTI',
+    '001011': 'SLTIU'
+}
+
+# Diccionario de instrucciones de carga/almacenamiento (opcode) - TIPO I MEMORIA
+instrucciones_memoria = {
+    '100011': 'LW',    # Load Word
+    '101011': 'SW',    # Store Word
 }
 
 valor_operacion_tipo_r = '000000'  # opcode
@@ -56,25 +70,97 @@ def extraer_elementos(linea):
 
 def obtener_codigo_binario(instruccion):
     """Devuelve el código binario asociado a la instrucción."""
+    # Buscar en instrucciones tipo R
     for clave, valor in instruccion_logica_aritmetica.items():
         if valor == instruccion:
-            return clave
-    return None
+            return ('R', clave)
+    
+    # Buscar en instrucciones inmediatas
+    for clave, valor in instruccion_logica_aritmetica_inmediata.items():
+        if valor == instruccion:
+            return ('I', clave)
+    
+    # Buscar en instrucciones de memoria
+    for clave, valor in instrucciones_memoria.items():
+        if valor == instruccion:
+            return ('M', clave)
+    
+    return (None, None)
 
-def convertir_a_binario(numero):
-    """Convierte un número entero a binario de 5 bits."""
-    return format(int(numero), '05b')
+def convertir_a_binario(numero, bits=5):
+    """Convierte un número entero a binario con la cantidad de bits especificada."""
+    return format(int(numero), f'0{bits}b')
+
+def convertir_inmediato_a_binario(numero, bits=16):
+    """Convierte un número inmediato a binario de 16 bits (complemento a 2 para negativos)."""
+    num = int(numero)
+    if num < 0:
+        # Complemento a 2 para números negativos
+        return format((1 << bits) + num, f'0{bits}b')
+    else:
+        return format(num, f'0{bits}b')
 
 def dividir_en_bytes(binario):
     """Divide una cadena binaria en grupos de 8 bits separados por salto de línea."""
     bytes_list = [binario[i:i+8] for i in range(0, len(binario), 8)]
     return '\n'.join(bytes_list)
 
+def parsear_instruccion_memoria(datos):
+    if len(datos) < 2:
+        return None, None, None
+    
+    rt = datos[0]
+
+    # CORRECCIÓN: Faltaba coma después del patrón regex
+    match = re.match(r'(\-?\d+)\((\d+)\)', datos[1])
+    if match:
+        offset = match.group(1)
+        rs = match.group(2)
+        return rt, rs, offset
+    else:
+        # Intentar formato alternativo sin paréntesis
+        if len(datos) >= 3:
+            return datos[0], datos[2], datos[1]  # rt, rs, offset
+    return None, None, None
+
 # Función para exportar a archivo
 def exportar_a_archivo():
     contenido = memoria_text.get("1.0", tk.END).strip()
-    with open("..\\ArqMIPS\\instrucciones.txt", "w") as archivo:
-        archivo.write(contenido)
+    
+    if not contenido:
+        messagebox.showwarning("Advertencia", "No hay contenido para exportar")
+        return
+    
+    archivo = filedialog.asksaveasfilename(
+        title="Guardar instrucciones",
+        defaultextension=".txt",
+        filetypes=[("Archivos de texto", "*.txt"), ("Todos los archivos", "*.*")],
+        initialfile="instrucciones_convertidas.txt"
+    )
+    
+    if not archivo:
+        return
+    
+    try:
+        if os.path.exists(archivo):
+            respuesta = messagebox.askyesno(
+                "Archivo existente", 
+                f"El archivo '{os.path.basename(archivo)}' ya existe.\n¿Desea sobrescribirlo?"
+            )
+            if not respuesta:
+                return
+        
+        with open(archivo, "w", encoding="utf-8") as f:
+            f.write(contenido)
+        
+        messagebox.showinfo("Éxito", f"Archivo guardado en:\n{archivo}")
+        
+    except PermissionError:
+        messagebox.showerror("Error", "No tiene permisos para guardar en esta ubicación")
+    except OSError as e:
+        messagebox.showerror("Error", f"No se pudo guardar el archivo:\n{str(e)}")
+    except Exception as e:
+        messagebox.showerror("Error", f"Error inesperado:\n{str(e)}")
 
 # ---------------------------------
 # Conversión completa
@@ -84,43 +170,78 @@ def convertir():
     texto = in_assembly.get("1.0", tk.END).strip()
     lineas = texto.splitlines()
     instruccion_convertida_text.delete("1.0", tk.END)
-    memoria_text.delete("1.0", tk.END)  # Limpiar memoria también
+    memoria_text.delete("1.0", tk.END)
 
     for linea in lineas:
         if not linea.strip():
             continue
 
         instruccion, datos = extraer_elementos(linea)
-        if not instruccion or len(datos) < 3:
+        if not instruccion or len(datos) < 2:
             messagebox.showerror("Error", f"Línea inválida: {linea}")
             continue
 
-        funct = obtener_codigo_binario(instruccion)
-        if not funct:
+        tipo, codigo = obtener_codigo_binario(instruccion)
+        if not tipo or not codigo:
             messagebox.showerror("Error", f"Instrucción desconocida: {instruccion}")
             continue
 
-        # Orden tipo R: $d, $s, $t
-        rd = convertir_a_binario(datos[0])
-        rs = convertir_a_binario(datos[1])
-        rt = convertir_a_binario(datos[2])
+        if tipo == 'R':
+            # Instrucción tipo R: $d, $s, $t
+            if len(datos) < 3:
+                messagebox.showerror("Error", f"Instrucción tipo R requiere 3 operandos: {linea}")
+                continue
+            
+            rd = convertir_a_binario(datos[0])
+            rs = convertir_a_binario(datos[1])
+            rt = convertir_a_binario(datos[2])
 
-        # Concatenación: opcode + rs + rt + rd + shamt + funct
-        instruccion_final = valor_operacion_tipo_r + rs + rt + rd + valor_shampt + funct
+            # Concatenación: opcode + rs + rt + rd + shamt + funct
+            instruccion_final = valor_operacion_tipo_r + rs + rt + rd + valor_shampt + codigo
+
+        elif tipo == 'I':
+            # Instrucción tipo I: $t, $s, inmediato
+            if len(datos) < 3:
+                messagebox.showerror("Error", f"Instrucción tipo I requiere 3 operandos: {linea}")
+                continue
+            
+            rt = convertir_a_binario(datos[0])
+            rs = convertir_a_binario(datos[1])
+            inmediato = convertir_inmediato_a_binario(datos[2])
+
+            # Concatenación: opcode + rs + rt + inmediato
+            instruccion_final = codigo + rs + rt + inmediato
+
+        elif tipo == 'M':
+            rt, rs, offset = parsear_instruccion_memoria(datos)
+
+            if rt is None or rs is None or offset is None:
+                # CORRECCIÓN: Typo en "inválido"
+                messagebox.showerror("Error", f"Formato inválido para {instruccion}. Use: {instruccion} $t, offset($s)")
+                continue
+
+            rt_bin = convertir_a_binario(rt)
+            rs_bin = convertir_a_binario(rs)
+            offset_bin = convertir_inmediato_a_binario(offset)
+
+            instruccion_final = codigo + rs_bin + rt_bin + offset_bin
+
+        else:
+            messagebox.showerror("Error", f"Tipo de instrucción no soportado: {tipo}")
+            continue
+
         binario_en_bytes = dividir_en_bytes(instruccion_final)
 
         # Insertar en los campos de texto
         instruccion_convertida_text.insert(tk.END, instruccion_final + "\n")
-        
-        # Insertar los bytes con saltos de línea y un separador entre instrucciones
-        memoria_text.insert(tk.END, binario_en_bytes + "\n" )
-
+        memoria_text.insert(tk.END, binario_en_bytes + "\n")
 
 def binario_a_ensamblador():
     # Obtener el texto binario del campo de instrucción convertida
     texto_binario = instruccion_convertida_text.get("1.0", tk.END).strip()
     
     if not texto_binario:
+        messagebox.showwarning("Advertencia", "No hay código binario para convertir")
         return
     
     lineas_binario = texto_binario.splitlines()
@@ -132,41 +253,90 @@ def binario_a_ensamblador():
             messagebox.showerror("Error", f"Instrucción binaria inválida: {binario}")
             continue
         
-        # Extraer las partes de la instrucción tipo R
+        # Extraer opcode primero para determinar el tipo
         opcode = binario[0:6]
-        rs = binario[6:11]
-        rt = binario[11:16]
-        rd = binario[16:21]
-        shamt = binario[21:26]
-        funct = binario[26:32]
         
-        # Verificar que sea tipo R
-        if opcode != '000000':
-            messagebox.showerror("Error", f"No es una instrucción tipo R: {binario}")
-            continue
+        if opcode == '000000':
+            # Instrucción tipo R
+            rs = binario[6:11]
+            rt = binario[11:16]
+            rd = binario[16:21]
+            shamt = binario[21:26]
+            funct = binario[26:32]
+            
+            # Buscar la instrucción en el diccionario tipo R
+            instruccion = None
+            for clave, valor in instruccion_logica_aritmetica.items():
+                if clave == funct:
+                    instruccion = valor
+                    break
+            
+            if not instruccion:
+                messagebox.showerror("Error", f"Instrucción desconocida para funct: {funct}")
+                continue
+            
+            # Convertir registros a decimal
+            try:
+                reg_rd = int(rd, 2)
+                reg_rs = int(rs, 2)
+                reg_rt = int(rt, 2)
+            except ValueError:
+                messagebox.showerror("Error", f"Error al convertir registros en: {binario}")
+                continue
+            
+            # Formar la instrucción ensamblador tipo R
+            linea_ensamblador = f"{instruccion} ${reg_rd}, ${reg_rs}, ${reg_rt}"
+            
+        else:
+            # Instrucción tipo I (inmediata)
+            rs = binario[6:11]
+            rt = binario[11:16]
+            inmediato = binario[16:32]
+            
+            # Buscar la instrucción en los diccionarios
+            instruccion = None
+            tipo_instruccion = None
+            
+            # Buscar en instrucciones aritméticas inmediatas
+            for clave, valor in instruccion_logica_aritmetica_inmediata.items():
+                if clave == opcode:
+                    instruccion = valor
+                    tipo_instruccion = 'A'
+                    break
+            
+            # Buscar en instrucciones de memoria
+            if not instruccion:
+                for clave, valor in instrucciones_memoria.items():
+                    if clave == opcode:
+                        instruccion = valor
+                        tipo_instruccion = 'M'
+                        break
+            
+            if not instruccion:
+                messagebox.showerror("Error", f"Instrucción desconocida para opcode: {opcode}")
+                continue
+            
+            # Convertir registros e inmediato
+            try:
+                reg_rt = int(rt, 2)
+                reg_rs = int(rs, 2)
+                
+                # Convertir inmediato (complemento a 2 para negativos)
+                imm_valor = int(inmediato, 2)
+                if inmediato[0] == '1':  # Si es negativo
+                    imm_valor = imm_valor - (1 << 16)
+                
+            except ValueError:
+                messagebox.showerror("Error", f"Error al convertir registros/inmediato en: {binario}")
+                continue
+            
+            # Formar la instrucción ensamblador según el tipo
+            if tipo_instruccion == 'A':
+                linea_ensamblador = f"{instruccion} ${reg_rt}, ${reg_rs}, {imm_valor}"
+            else:
+                # Instrucción de memoria: $t, offset($s)
+                linea_ensamblador = f"{instruccion} ${reg_rt}, {imm_valor}(${reg_rs})"
         
-        # Buscar la instrucción en el diccionario
-        instruccion = None
-        for clave, valor in instruccion_logica_aritmetica.items():
-            if clave == funct:
-                instruccion = valor
-                break
-        
-        if not instruccion:
-            messagebox.showerror("Error", f"Instrucción desconocida para funct: {funct}")
-            continue
-        
-        # Convertir registros a decimal
-        try:
-            reg_rd = int(rd, 2)
-            reg_rs = int(rs, 2)
-            reg_rt = int(rt, 2)
-        except ValueError:
-            messagebox.showerror("Error", f"Error al convertir registros en: {binario}")
-            continue
-        
-        # Formar la instrucción ensamblador
-        linea_ensamblador = f"{instruccion} ${reg_rd}, ${reg_rs}, ${reg_rt}"
         resultado_ensamblador += linea_ensamblador + "\n"
         
         # También generar la representación en bytes para memoria
@@ -179,6 +349,9 @@ def binario_a_ensamblador():
     
     memoria_text.delete("1.0", tk.END)
     memoria_text.insert("1.0", resultado_memoria.strip())
+    
+    messagebox.showinfo("Éxito", "Conversión completada correctamente")
+
 # ---------------------------------
 # Interfaz gráfica
 # ---------------------------------
@@ -211,10 +384,14 @@ exportar_button.pack(pady=5)
 convertir_binario_assembly = ttk.Button(button_frame, text="Convertir Binario a Ensamblador", command=binario_a_ensamblador)
 convertir_binario_assembly.pack(pady=5)
 
+# Información sobre instrucciones soportadas
+info_label = tk.Label(button_frame, text="\nInstrucciones soportadas:\nTipo R: ADD, AND, NOR, OR, SLT\nTipo I: ADDI, ADDIU, ANDI, ORI, XORI, SLTI, SLTIU\nMemoria: LW, SW", 
+                     justify=tk.LEFT, font=("Arial", 8))
+info_label.pack(pady=10)
+
 # Campo de salida - Instrucción convertida
 instruccion_convertida_label = tk.Label(scrollable_frame, text="Instrucción convertida:")
 instruccion_convertida_label.grid(row=2, column=0, sticky="w", padx=20, pady=(5, 2))
-
 
 # Frame para el cuadro de texto de instrucción convertida con scrollbar
 instruccion_frame = tk.Frame(scrollable_frame)
@@ -241,7 +418,6 @@ memoria_text.configure(yscrollcommand=memoria_scrollbar.set)
 
 memoria_text.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
 memoria_scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
-
 
 # Configurar el scroll con la rueda del mouse
 def _on_mousewheel(event):
