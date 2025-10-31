@@ -1,0 +1,115 @@
+\documentclass[letterpaper, 11pt]{article}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage{appendix}
+\renewcommand{\appendixname}{Apéndices}
+\renewcommand{\appendixtocname}{Apéndices}
+\renewcommand{\appendixpagename}{Apéndices}
+
+\usepackage{float}
+\usepackage{setspace}
+\usepackage{caption}
+\usepackage{subcaption}
+\captionsetup[table]{name=Tabla}
+\usepackage[letterpaper, vmargin=2.5cm, hmargin=2.5cm]{geometry}
+
+% Hyperref debe ir entre los últimos paquetes
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black,
+	citecolor=black,
+	urlcolor=black
+}
+
+\usepackage{listings}
+\lstset{
+	basicstyle=\ttfamily\small,
+	numbers=left,
+	numberstyle=\tiny,
+	numbersep=5pt,
+	frame=single,
+	breaklines=true,
+	showstringspaces=false,
+	tabsize=4
+}
+
+\title{
+	\centering
+	\includegraphics[width=0.4\textwidth]{Img_doc/universidad-de-guadalajara-vector-logo-400x400}\\
+	\Large UNIVERSIDAD DE GUADALAJARA\\
+	\small CENTRO UNIVERSITARIO DE CIENCIAS EXACTAS E INGENIERÍAS\\
+	\vspace{20pt}
+	\large ARQUITECTURA DE COMPUTADORAS \\[1cm]
+	\textbf{\huge A - Decodificador de instrucciones tipo MIPS}\\[0.5cm]
+}
+
+\author{
+	Alumno: Erick Manuel González Carrillo (219695611) \\
+	Profesor: Jorge Ernesto Lopez Arce Delgado
+}
+\date{\today}
+
+\begin{document}
+	\maketitle
+	\newpage
+	
+	\pagestyle{plain}
+	\pagenumbering{roman}
+	\tableofcontents
+	\newpage
+	
+	\pagenumbering{arabic}
+	\setcounter{page}{1}
+	\section{Introducción}
+	El lenguaje de las computadoras suele se complejo para la comprensión del humano puesto que la única forma en que pueda entender nuestras instrucciones es por medio de códigos binarios, sin embargo si queremos realizar demasiadas instrucciones llega a ser bastante tardado y difícil de comprender.\\
+	Por eso es que los programadores construyeron un traductor que sea capaz de realizar las mismas instrucciones pero que sea mas claro de entender, entre ellas surgió el lenguaje ensamblador; este lenguaje estaba directamente escrito en la maquina, ademas que las instrucciones se pasaban directamente a binario. por ejemplo, podemos realizar una suma en ensamblador:
+	
+	\begin{lstlisting}[label=lst:addAss]
+		add A, B
+	\end{lstlisting}
+	
+	El ensamblador traducirá esta notación a:
+		\begin{lstlisting}[label=lst:addBin]
+		1000110010100000
+	\end{lstlisting}
+	
+	Es por ello que para esta actividad nos enfocaremos en desarrollar una aplicación que sea capaz de simular un código ensamblador de la arquitectura MIPS. \\
+	
+	Este decodificador recibirá las instrucciones en ensamblador MIPS, convirtiéndolas en código binario de 32 bits y que sean guardadas en la memoria de instrucciones.
+	
+	
+	\section{Marco teórico}
+	
+	Antes de realizar este decodificador debemos de saber que nos basaremos en la arquitectura MIPS de 32 bits con segmentación. Este diseño es capaz de realizar instrucciones tipo R e I, es por ello se considero el como se conforman estas instrucciones.
+	\\
+	Así pues, para esta actividad se uso el lenguaje de programación Python. Esta herramienta es fácil de comprender y programar ayudando a realizar programas que en otros lenguajes se requieren estructuras bastantes complejas. \\
+	La aplicación esta desarrollada en un entorno gráfico (GUI) para eso se uso la librería TKinter. Con esta herramienta se pueden realizar aplicaciones GUI sencillas pero funcionales. \\
+	El punto principal de esta aplicación es que reciba una instrucción ensamblador y que este sea traducido en código binario; en una parte estará la instrucción en forma de 32 bits y el otro cuadro estará la misma instrucción en bytes. Ademas de que cuenta con la capacidad de guardar la instrucción en un archivo para que la memoria de datos leerá el código y ser ejecutado.
+	
+	\section{Desarrollo}
+	Antes de pasar al desarrollo de la aplicación primero debemos de saber como es que se estructuran las instrucciones de la arquitectura MIPS  de 32 bits.\\
+	Esto quiere decir que la instrucción cuenta con 32 espacios donde recibirá tanto la operación como las direcciones de extracción y destino de dicha instrucción. MIPS cuenta con 3 tipos de instrucciones, las de tipo R, I y J. Las cuales describiremos solo las de tipo R y I. \\
+	La instrucción de tipo R es una instrucción que realiza operaciones lógicas y aritméticas entre registros por lo que su estructura sera mostrada a continuación:
+	
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		000000 & 10001 & 10010 & 01000 & 00000 & 100000 \\
+		\hline
+		6 & 5 & 5 & 5 & 5 & 6 \\
+		\hline
+	\end{tabular}
+	\caption{Estructura de instrucción MIPS}
+\end{table}
+	
+	\cite{estructComp}
+	
+	
+	
+	\bibliographystyle{plain}
+	\bibliography{bibliografia}
+\end{document}
