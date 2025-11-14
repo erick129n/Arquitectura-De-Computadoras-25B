@@ -196,3 +196,153 @@ run
 run
 run
 run
+restart
+# Compile of UnidadControl.v was successful.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.Control
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato2'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'datoOut'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato2'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'datoOut'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
+# Compile of memInstrucciones.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.memoryInstructions
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato2'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'datoOut'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato2'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'datoOut'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato2'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'datoOut'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato2'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'datoOut'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato2'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'datoOut'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
+# Compile of ADD.v was successful.
+# Compile of ALU.v was successful.
+# Compile of Registros.v was successful.
+# Compile of contador.v was successful.
+# Compile of memInstrucciones.v was successful.
+# Compile of MemoryData.v was successful.
+# Compile of ALUcontrol.v was successful.
+# Compile of mux.v was successful.
+# Compile of sumador.v was successful.
+# Compile of desplazador.v was successful.
+# Compile of UnidadControl.v was successful.
+# Compile of Buff.v was successful.
+# Compile of IF_ID.v was successful.
+# Compile of Nucleo.v was successful.
+# Compile of NucleoTB.v was successful.
+# Compile of ID_EX.v was successful.
+# Compile of EX_MEM.v was successful.
+# Compile of MEM_WB.v was successful.
+# 18 compiles, 0 failed with no errors.
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+# A time value could not be extracted from the current line
+# A time value could not be extracted from the current line
+# Compile of memInstrucciones.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.coreTB
+# Loading work.NucleoTop
+# Loading work.PC
+# Loading work.sumador
+# Loading work.memoryInstructions
+# Loading work.IF_ID
+# Loading work.Control
+# Loading work.Registros
+# Loading work.ID_EX
+# Loading work.ALUcontrol
+# Loading work.MUX
+# Loading work.ALU
+# Loading work.EX_MEM
+# Loading work.memoriaDatos
+# Loading work.MEM_WB
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato2'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'datoOut'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+# End time: 16:45:44 on Nov 14,2025, Elapsed time: 412:41:33
+# Errors: 0, Warnings: 4
