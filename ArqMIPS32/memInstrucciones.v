@@ -1,7 +1,7 @@
 module memoryInstructions
 	#(parameter WORD = 32, S_MEM = 8, DIR_MEM = 1024)
 	(
-    input [S_MEM-1:0] address,
+    input [WORD-1:0] address,
     output [WORD-1:0] instruction
 );
 
@@ -12,5 +12,5 @@ initial begin
     $readmemb("Instrucciones.txt", memory);
 end
 
-  assign instruction = address;
+  assign instruction = memory[address] + memory[address+1] + memory[address+2] + memory[address+3];
 endmodule

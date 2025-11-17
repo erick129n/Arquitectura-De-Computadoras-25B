@@ -209,7 +209,7 @@ module NucleoTop#(parameter SIZE_DATA = 32,
 	wire branchToPC;
 	assign branchToPC = ex_mem_branch & flag_zero_to_branch;
 	
-	MUX #(.SIZE(5))mux_branch(
+	MUX #(.SIZE(32))mux_branch(
 		.dato(add_instruccion_to_mux),                    // ← Para el branch no implementado
 		.dato2(addr_instruccion_in),     // ← Del sumador (PC+4)
 		.sel(branchToPC),

@@ -5,6 +5,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	NucleoTop
 
+} {} {}} D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/memInstrucciones.v {1 {vlog -work work -stats=none D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/memInstrucciones.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module memoryInstructions
+
+Top level modules:
+	memoryInstructions
+
 } {} {}} D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/ID_EX.v {1 {vlog -work work -stats=none D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/ID_EX.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module ID_EX
@@ -89,19 +96,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	Registros
 
-} {} {}} D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/EX_MEM.v {1 {vlog -work work -stats=none D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/EX_MEM.v
+} {} {}} D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Buff.v {1 {vlog -work work -stats=none D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Buff.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module EX_MEM
+-- Compiling module buffer
 
 Top level modules:
-	EX_MEM
-
-} {} {}} D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/MemoryData.v {1 {vlog -work work -stats=none D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/MemoryData.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module memoriaDatos
-
-Top level modules:
-	memoriaDatos
+	buffer
 
 } {} {}} D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/ALUcontrol.v {1 {vlog -work work -stats=none D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/ALUcontrol.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -110,11 +110,18 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	ALUcontrol
 
-} {} {}} D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Buff.v {1 {vlog -work work -stats=none D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Buff.v
+} {} {}} D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/MemoryData.v {1 {vlog -work work -stats=none D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/MemoryData.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module buffer
+-- Compiling module memoriaDatos
 
 Top level modules:
-	buffer
+	memoriaDatos
+
+} {} {}} D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/EX_MEM.v {1 {vlog -work work -stats=none D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/EX_MEM.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module EX_MEM
+
+Top level modules:
+	EX_MEM
 
 } {} {}}
