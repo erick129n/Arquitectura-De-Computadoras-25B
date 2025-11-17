@@ -1,25 +1,7 @@
-# Compile of ADD.v was successful.
-# Compile of ALU.v was successful.
-# Compile of Registros.v was successful.
-# Compile of contador.v was successful.
-# Compile of memInstrucciones.v was successful.
 # Compile of MemoryData.v was successful.
-# Compile of ALUcontrol.v was successful.
-# Compile of mux.v was successful.
-# Compile of sumador.v was successful.
-# Compile of desplazador.v was successful.
-# Compile of UnidadControl.v was successful.
-# Compile of Buff.v was successful.
-# Compile of IF_ID.v was successful.
-# Compile of Nucleo.v was successful.
-# Compile of NucleoTB.v was successful.
-# Compile of ID_EX.v was successful.
-# Compile of EX_MEM.v was successful.
-# Compile of MEM_WB.v was successful.
-# 18 compiles, 0 failed with no errors.
 vsim work.coreTB
 # vsim work.coreTB 
-# Start time: 12:04:11 on Oct 28,2025
+# Start time: 12:41:18 on Nov 17,2025
 # Loading work.coreTB
 # Loading work.NucleoTop
 # Loading work.PC
@@ -35,33 +17,70 @@ vsim work.coreTB
 # Loading work.EX_MEM
 # Loading work.memoriaDatos
 # Loading work.MEM_WB
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato2'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(5).
-#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'datoOut'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/mux.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 192
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato2'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/mux.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 192
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'datoOut'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/mux.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 192
+run
+# Compile of EX_MEM.v was successful.
+# Compile of ALU.v was successful.
+# Compile of ID_EX.v was successful.
+# Compile of Nucleo.v failed with 1 errors.
+# Compile of Nucleo.v failed with 1 errors.
+# Compile of Nucleo.v was successful.
+# Compile of Nucleo.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.NucleoTop
+# Loading work.ID_EX
+# Loading work.desplazar
+# Loading work.ALU
+# Loading work.EX_MEM
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'data_in2'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/IF_ID.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/IF_ID File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 45
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'data_out2'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/IF_ID.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/IF_ID File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 45
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'data_in3'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/ID_EX.v(15).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/ID_EX File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 109
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'data_out3'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/ID_EX.v(25).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/ID_EX File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 109
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'data_out_jm'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/ID_EX.v(26).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/ID_EX File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 109
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'dato'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/desplazador.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/desplazador File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 134
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'datoOut'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/desplazador.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/desplazador File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 134
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'dato'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/mux.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_in_ALU File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 155
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'data_in'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/EX_MEM.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/EX_MEM File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 189
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'data_out'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/EX_MEM.v(17).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/EX_MEM File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 189
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/mux.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 211
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato2'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/mux.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 211
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'datoOut'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/mux.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 211
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
 add wave -position insertpoint  \
-sim:/coreTB/DUT/clk
+sim:/coreTB/DUT/PC/clk
 add wave -position insertpoint  \
-sim:/coreTB/DUT/PC/reset \
-sim:/coreTB/DUT/PC/pc_in \
-sim:/coreTB/DUT/PC/pc_out
-add wave -position insertpoint  \
-sim:/coreTB/DUT/sumador/A \
-sim:/coreTB/DUT/sumador/B \
-sim:/coreTB/DUT/sumador/res
+sim:/coreTB/DUT/memoryInstructions/instruction
 add wave -position insertpoint  \
 sim:/coreTB/DUT/memoryInstructions/address \
-sim:/coreTB/DUT/memoryInstructions/instruction \
-sim:/coreTB/DUT/memoryInstructions/memory
+sim:/coreTB/DUT/memoryInstructions/instruction
 add wave -position insertpoint  \
 sim:/coreTB/DUT/IF_ID/data_in \
 sim:/coreTB/DUT/IF_ID/data_in2 \
 sim:/coreTB/DUT/IF_ID/data_out \
 sim:/coreTB/DUT/IF_ID/data_out2
 add wave -position insertpoint  \
-sim:/coreTB/DUT/Control/instruccion \
 sim:/coreTB/DUT/Control/RegDest \
 sim:/coreTB/DUT/Control/Branch \
 sim:/coreTB/DUT/Control/MemRead \
@@ -73,16 +92,9 @@ sim:/coreTB/DUT/Control/RegWrite
 add wave -position insertpoint  \
 sim:/coreTB/DUT/BR/ARead1 \
 sim:/coreTB/DUT/BR/ARead2 \
-sim:/coreTB/DUT/BR/AWR \
-sim:/coreTB/DUT/BR/DataIn \
-sim:/coreTB/DUT/BR/WE \
 sim:/coreTB/DUT/BR/DRead1 \
-sim:/coreTB/DUT/BR/DRead2 \
-sim:/coreTB/DUT/BR/Registro
+sim:/coreTB/DUT/BR/DRead2
 add wave -position insertpoint  \
-sim:/coreTB/DUT/ID_EX/WB \
-sim:/coreTB/DUT/ID_EX/M \
-sim:/coreTB/DUT/ID_EX/EX \
 sim:/coreTB/DUT/ID_EX/data_in \
 sim:/coreTB/DUT/ID_EX/data_in2 \
 sim:/coreTB/DUT/ID_EX/data_in3 \
@@ -95,10 +107,18 @@ sim:/coreTB/DUT/ID_EX/M_out \
 sim:/coreTB/DUT/ID_EX/EX_out \
 sim:/coreTB/DUT/ID_EX/data_out \
 sim:/coreTB/DUT/ID_EX/data_out2 \
+sim:/coreTB/DUT/ID_EX/data_out3 \
 sim:/coreTB/DUT/ID_EX/data_out_jm \
 sim:/coreTB/DUT/ID_EX/funcion \
 sim:/coreTB/DUT/ID_EX/AWrite1 \
 sim:/coreTB/DUT/ID_EX/AWrite2
+add wave -position insertpoint  \
+sim:/coreTB/DUT/desplazador/dato \
+sim:/coreTB/DUT/desplazador/datoOut
+add wave -position insertpoint  \
+sim:/coreTB/DUT/sumador_despl/A \
+sim:/coreTB/DUT/sumador_despl/B \
+sim:/coreTB/DUT/sumador_despl/res
 add wave -position insertpoint  \
 sim:/coreTB/DUT/ALUcontrol/instruccion \
 sim:/coreTB/DUT/ALUcontrol/AluOP \
@@ -112,6 +132,7 @@ add wave -position insertpoint  \
 sim:/coreTB/DUT/ALU/a \
 sim:/coreTB/DUT/ALU/b \
 sim:/coreTB/DUT/ALU/operador \
+sim:/coreTB/DUT/ALU/zero \
 sim:/coreTB/DUT/ALU/resultado
 add wave -position insertpoint  \
 sim:/coreTB/DUT/mux_regDest/dato \
@@ -121,28 +142,24 @@ sim:/coreTB/DUT/mux_regDest/datoOut
 add wave -position insertpoint  \
 sim:/coreTB/DUT/EX_MEM/WB \
 sim:/coreTB/DUT/EX_MEM/M \
+sim:/coreTB/DUT/EX_MEM/zero_in \
 sim:/coreTB/DUT/EX_MEM/data_in \
 sim:/coreTB/DUT/EX_MEM/data_in2 \
 sim:/coreTB/DUT/EX_MEM/AWriteMem_in \
 sim:/coreTB/DUT/EX_MEM/AWriteReg_in \
 sim:/coreTB/DUT/EX_MEM/WB_out \
 sim:/coreTB/DUT/EX_MEM/M_out \
+sim:/coreTB/DUT/EX_MEM/zero_out \
 sim:/coreTB/DUT/EX_MEM/data_out \
 sim:/coreTB/DUT/EX_MEM/data_out2 \
 sim:/coreTB/DUT/EX_MEM/AWriteMem \
 sim:/coreTB/DUT/EX_MEM/AWriteReg
 add wave -position insertpoint  \
-sim:/coreTB/DUT/mux_branch/dato \
-sim:/coreTB/DUT/mux_branch/dato2 \
-sim:/coreTB/DUT/mux_branch/sel \
-sim:/coreTB/DUT/mux_branch/datoOut
-add wave -position insertpoint  \
 sim:/coreTB/DUT/memoriaDatos/address \
 sim:/coreTB/DUT/memoriaDatos/dato \
 sim:/coreTB/DUT/memoriaDatos/MemWrite \
 sim:/coreTB/DUT/memoriaDatos/MemRead \
-sim:/coreTB/DUT/memoriaDatos/datoLeido \
-sim:/coreTB/DUT/memoriaDatos/memory
+sim:/coreTB/DUT/memoriaDatos/datoLeido
 add wave -position insertpoint  \
 sim:/coreTB/DUT/MEM_WB/WB \
 sim:/coreTB/DUT/MEM_WB/DatoLeido \
@@ -158,182 +175,201 @@ sim:/coreTB/DUT/mux_MemoryToReg/dato2 \
 sim:/coreTB/DUT/mux_MemoryToReg/sel \
 sim:/coreTB/DUT/mux_MemoryToReg/datoOut
 run
-run -all
-# Break key hit
-# Break in Module coreTB at C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/NucleoTB.v line 21
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato2'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(5).
-#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'datoOut'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
-run
-# GetModuleFileName: No se puede encontrar el módulo especificado.
-# 
-# 
-run
-run
-run
-# Compile of NucleoTB.v was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.coreTB
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato2'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(5).
-#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'datoOut'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
-run
-# GetModuleFileName: No se puede encontrar el módulo especificado.
-# 
-# 
-run
-run
-run
-run
-run
-run
-restart
-# Compile of UnidadControl.v was successful.
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.Control
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato2'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(5).
-#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'datoOut'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
-run
-# GetModuleFileName: No se puede encontrar el módulo especificado.
-# 
-# 
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato2'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(5).
-#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'datoOut'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
-# Compile of memInstrucciones.v was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.memoryInstructions
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato2'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(5).
-#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'datoOut'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
-run
-# GetModuleFileName: No se puede encontrar el módulo especificado.
-# 
-# 
-run
-run
-run
-run
-run
-run
-run
 run
 restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato2'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(5).
-#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'datoOut'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
-run
-# GetModuleFileName: No se puede encontrar el módulo especificado.
-# 
-# 
-run
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato2'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(5).
-#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'datoOut'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
-run
-# GetModuleFileName: No se puede encontrar el módulo especificado.
-# 
-# 
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato2'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(5).
-#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'datoOut'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
-run
-# GetModuleFileName: No se puede encontrar el módulo especificado.
-# 
-# 
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato2'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(5).
-#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'datoOut'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
-# Compile of ADD.v was successful.
-# Compile of ALU.v was successful.
-# Compile of Registros.v was successful.
-# Compile of contador.v was successful.
-# Compile of memInstrucciones.v was successful.
-# Compile of MemoryData.v was successful.
-# Compile of ALUcontrol.v was successful.
-# Compile of mux.v was successful.
-# Compile of sumador.v was successful.
-# Compile of desplazador.v was successful.
-# Compile of UnidadControl.v was successful.
-# Compile of Buff.v was successful.
-# Compile of IF_ID.v was successful.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'data_in2'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/IF_ID.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/IF_ID File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 45
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'data_out2'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/IF_ID.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/IF_ID File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 45
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'data_in3'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/ID_EX.v(15).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/ID_EX File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 109
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'data_out3'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/ID_EX.v(25).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/ID_EX File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 109
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'data_out_jm'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/ID_EX.v(26).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/ID_EX File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 109
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'dato'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/desplazador.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/desplazador File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 134
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'datoOut'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/desplazador.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/desplazador File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 134
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'dato'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/mux.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_in_ALU File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 155
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'data_in'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/EX_MEM.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/EX_MEM File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 189
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'data_out'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/EX_MEM.v(17).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/EX_MEM File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 189
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/mux.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 211
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato2'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/mux.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 211
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'datoOut'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/mux.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 211
+# Compile of Nucleo.v failed with 1 errors.
 # Compile of Nucleo.v was successful.
-# Compile of NucleoTB.v was successful.
-# Compile of ID_EX.v was successful.
-# Compile of EX_MEM.v was successful.
-# Compile of MEM_WB.v was successful.
-# 18 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.NucleoTop
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'data_in2'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/IF_ID.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/IF_ID File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 45
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'data_out2'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/IF_ID.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/IF_ID File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 45
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'data_in3'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/ID_EX.v(15).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/ID_EX File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 109
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'data_out3'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/ID_EX.v(25).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/ID_EX File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 109
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'data_out_jm'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/ID_EX.v(26).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/ID_EX File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 109
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'dato'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/desplazador.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/desplazador File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 134
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'datoOut'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/desplazador.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/desplazador File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 134
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'dato'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/mux.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_in_ALU File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 155
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'data_in'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/EX_MEM.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/EX_MEM File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 189
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'data_out'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/EX_MEM.v(17).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/EX_MEM File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 189
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/mux.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 211
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato2'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/mux.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 211
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'datoOut'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/mux.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 211
 run
 # GetModuleFileName: No se puede encontrar el módulo especificado.
 # 
 # 
-# A time value could not be extracted from the current line
-# A time value could not be extracted from the current line
+run
+run
+run
+restart
+# Compile of Nucleo.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.NucleoTop
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'data_in2'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/IF_ID.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/IF_ID File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 45
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'data_out2'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/IF_ID.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/IF_ID File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 45
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'data_in3'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/ID_EX.v(15).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/ID_EX File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 109
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'data_out3'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/ID_EX.v(25).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/ID_EX File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 109
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'data_out_jm'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/ID_EX.v(26).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/ID_EX File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 109
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'dato'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/desplazador.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/desplazador File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 134
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'datoOut'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/desplazador.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/desplazador File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 134
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'dato'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/mux.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_in_ALU File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 155
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'data_in'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/EX_MEM.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/EX_MEM File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 189
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'data_out'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/EX_MEM.v(17).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/EX_MEM File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 189
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/mux.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 211
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato2'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/mux.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 211
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'datoOut'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/mux.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 211
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+# Compile of Nucleo.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.NucleoTop
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'data_in2'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/IF_ID.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/IF_ID File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 46
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'data_out2'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/IF_ID.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/IF_ID File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 46
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'data_in3'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/ID_EX.v(15).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/ID_EX File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 110
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'data_out3'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/ID_EX.v(25).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/ID_EX File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 110
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'datoOut'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/desplazador.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/desplazador File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 135
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'data_in'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/EX_MEM.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/EX_MEM File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 190
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'data_out'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/EX_MEM.v(17).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/EX_MEM File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 190
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/mux.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 212
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato2'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/mux.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 212
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'datoOut'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/mux.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 212
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+# Compile of Nucleo.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.NucleoTop
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'pc_in'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v(15).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/NucleoTB.v Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'address'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/memInstrucciones.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/memoryInstructions File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'A'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/sumador.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/sumador_despl File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 140
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'B'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/sumador.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/sumador_despl File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 140
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'res'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/sumador.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/sumador_despl File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 140
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'dato'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/mux.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 212
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'dato2'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/mux.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 212
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'datoOut'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/mux.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 212
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+# Compile of Nucleo.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.NucleoTop
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'pc_in'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v(15).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/NucleoTB.v Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'address'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/memInstrucciones.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/memoryInstructions File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'dato'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/mux.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 212
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'dato2'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/mux.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 212
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'datoOut'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/mux.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 212
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
 # Compile of memInstrucciones.v was successful.
 restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.coreTB
-# Loading work.NucleoTop
-# Loading work.PC
-# Loading work.sumador
 # Loading work.memoryInstructions
-# Loading work.IF_ID
-# Loading work.Control
-# Loading work.Registros
-# Loading work.ID_EX
-# Loading work.ALUcontrol
-# Loading work.MUX
-# Loading work.ALU
-# Loading work.EX_MEM
-# Loading work.memoriaDatos
-# Loading work.MEM_WB
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'dato2'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(5).
-#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (8) for port 'datoOut'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 192
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'pc_in'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v(15).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/NucleoTB.v Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'dato'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/mux.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 212
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'dato2'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/mux.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 212
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'datoOut'. The port definition is at: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/mux.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/mux_branch File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 212
 run
 # GetModuleFileName: No se puede encontrar el módulo especificado.
 # 
@@ -343,6 +379,5 @@ run
 run
 run
 run
-run
-# End time: 16:45:44 on Nov 14,2025, Elapsed time: 412:41:33
-# Errors: 0, Warnings: 4
+# End time: 16:15:29 on Nov 17,2025, Elapsed time: 3:34:11
+# Errors: 0, Warnings: 5

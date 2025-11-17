@@ -25,6 +25,7 @@ module ALU #(
     input [SIZEDATA-1 :0] a,
     input [SIZEDATA-1 :0] b,
     input [OP-1 :0] operador,
+	output zero,
     output reg[SIZEDATA-1 :0] resultado
     );
 
@@ -57,5 +58,7 @@ module ALU #(
 				end
 			endcase
 	end
+	
+	assign zero = resultado ? 1 : 0;
 
 endmodule

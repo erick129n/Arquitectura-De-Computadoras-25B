@@ -1,5 +1,5 @@
 module memoriaDatos
-	#(parameter SIZE = 32, SIZE_MEM = 512)
+	#(parameter SIZE = 32, SIZE_MEM = 32'h07FFFFFF)
 	(
 	input[SIZE-1:0] address,
 	input[SIZE-1:0] dato,
