@@ -96,13 +96,6 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	MEM_WB
 
-} {} {}} C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/ADD.v {1 {vlog -work work -stats=none C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/ADD.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module ADD
-
-Top level modules:
-	ADD
-
 } {} {}} C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/desplazador.v {1 {vlog -work work -stats=none C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/desplazador.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module desplazar
@@ -110,12 +103,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	desplazar
 
-} {} {}} C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Registros.v {1 {vlog -work work -stats=none C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Registros.v
+} {} {}} C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/ADD.v {1 {vlog -work work -stats=none C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/ADD.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module Registros
+-- Compiling module ADD
 
 Top level modules:
-	Registros
+	ADD
 
 } {} {}} C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/contador.v {1 {vlog -work work -stats=none C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/contador.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -123,5 +116,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 
 Top level modules:
 	PC
+
+} {} {}} C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Registros.v {1 {vlog -work work -stats=none C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Registros.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Registros
+
+Top level modules:
+	Registros
 
 } {} {}}
