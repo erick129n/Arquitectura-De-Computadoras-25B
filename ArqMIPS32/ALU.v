@@ -25,6 +25,7 @@ module ALU #(
     input [SIZEDATA-1 :0] a,
     input [SIZEDATA-1 :0] b,
     input [OP-1 :0] operador,
+	output reg zero,
     output reg[SIZEDATA-1 :0] resultado
     );
 
@@ -46,6 +47,7 @@ module ALU #(
 			4'b0110:
 				begin
 					resultado = a - b;
+					zero = resultado ? 1 : 0;
 				end
 			4'b0111:
 				begin
@@ -55,7 +57,13 @@ module ALU #(
 				begin
 					resultado = ~a || ~b;
 				end
+			default:
+				begin
+					resultado = 32'b0;
+					zero = 0;
+				end
 			endcase
 	end
+	
 
 endmodule

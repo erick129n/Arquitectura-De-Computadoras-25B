@@ -1,7 +1,7 @@
 module ID_EX#(parameter SIZE = 32,
 			  parameter ADDR_SIZE = 5,
 			  parameter SIZE_FNC = 6,
-			  parameter SIZE_EXTEND = 8,
+			  parameter SIZE_EXTEND = 32,
 			  parameter S_EX = 4,
 			  parameter S_WB =2,
 			  parameter S_M = 3)
@@ -22,6 +22,7 @@ module ID_EX#(parameter SIZE = 32,
 	output reg [S_EX-1:0]EX_out,
     output reg [SIZE-1:0] data_out,
     output reg [SIZE-1:0] data_out2,
+	output reg [SIZE-1:0] data_out3,
 	output reg [SIZE-1:0] data_out_jm,
 	output reg [SIZE_FNC-1:0] funcion,
 	output reg [ADDR_SIZE-1:0] AWrite1,
@@ -34,6 +35,7 @@ always @(posedge clk) begin
 	EX_out <= EX;
 	data_out <= data_in;
     data_out2 <= data_in2;
+	data_out3 <= data_in3;
 	data_out_jm <= data_extend_in;
 	funcion <= funcion_in;
 	AWrite1 <= adrWrite1;

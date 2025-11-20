@@ -1,5 +1,6 @@
 module NucleoTop#(parameter SIZE_DATA = 32,
-				  parameter ADD_INST_SIZE = 8,
+				  parameter ADD_INST_SIZE = 32,
+				  parameter ADD_SIZE = 32,
 				  parameter VALOR_SUMADO = 4,
 				  parameter SIZE_OP = 6,
 				  parameter SIZE_ADDR_BR = 5,
@@ -17,20 +18,20 @@ module NucleoTop#(parameter SIZE_DATA = 32,
 	
 	wire [ADD_INST_SIZE-1 : 0] addr_instruccion_in, addr_instruccion_out, addr_instruccion_to_mux;
 	wire [SIZE_DATA-1: 0] instruccion_a_buff, out_instruccion;
+	wire [ADD_INST_SIZE-1 :0] ID_addr_instruccion_to_EX;
 
 	// ELIMINAR ESTA LÍNEA: assign addr_instruccion_in = pc_in;
-	assign addr_instruccion_to_mux = addr_instruccion_in;
+	//assign addr_instruccion_to_mux = addr_instruccion_in;
 
-	PC PC(
+	PC #(.S_DATA(ADD_INST_SIZE)) PC(
 	  .clk(clk),
 	  .reset(reset_pc), 
 	  .pc_in(addr_instruccion_to_mux), 
 	  .pc_out(addr_instruccion_out)
 	);
-
-	sumador sumador(
+	sumador#(.SIZE(ADD_INST_SIZE)) sumador(
 		.A(addr_instruccion_out),
-		.B(8'd4),
+		.B(32'd4),
 		.res(addr_instruccion_in)  // ← Esta es la única fuente
 	);
 
@@ -45,9 +46,9 @@ module NucleoTop#(parameter SIZE_DATA = 32,
 	IF_ID IF_ID(
 		.clk(clk),
 		.data_in(instruccion_a_buff),
-		.data_in2(32'b0),
+		.data_in2(addr_instruccion_in), //direccion de la instruccion para hacer banch
 		.data_out(out_instruccion),
-		.data_out2()
+		.data_out2(ID_addr_instruccion_to_EX)
 	);
 	
 	wire [SIZE_OP-1: 0] OP = out_instruccion[31:26];
@@ -100,11 +101,21 @@ module NucleoTop#(parameter SIZE_DATA = 32,
 	wire [SIZE_DATA-1:0] B;
 	wire [SIZE_ADDR_BR-1:0] AdrrDest1;
 	wire [SIZE_ADDR_BR-1:0] AdrrDest2;
-	
+	wire [ADD_INST_SIZE-1:0] EX_addr_instr_branch; //instruccion que sera operada con el sumador
 	wire alusrc_out, sel_regDes;
 	wire [SIZE_ALU_OP-1:0] opeAlu;
 	wire [S_WB-1:0] wb_ex_mem;
 	wire [S_M-1:0] m_ex_mem;
+	wire [ADD_SIZE-1:0] offset_to_desp;
+	wire [SIZE_DATA-1:0] dato_extendido;
+	
+	signed_extention extension(
+		.half_word(inst_inmediata),
+		.word(dato_extendido)
+	);
+	
+	
+
 	ID_EX ID_EX(
 		.WB({RegWrite, Mem_to_Reg}),
 		.M({branch, MemRead, MemWrite}),
@@ -112,8 +123,8 @@ module NucleoTop#(parameter SIZE_DATA = 32,
 		.clk(clk),
 		.data_in(DRead1),
 		.data_in2(DRead2),
-		.data_in3(),
-		.data_extend_in({16'b0, inst_inmediata}),
+		.data_in3(ID_addr_instruccion_to_EX), //direccion de memoria para hacer branch
+		.data_extend_in(dato_extendido),
 		.adrWrite1(AR2),
 		.adrWrite2(AW),
 		.funcion_in(inst_funcion),
@@ -122,10 +133,23 @@ module NucleoTop#(parameter SIZE_DATA = 32,
 		.EX_out({alusrc_out, opeAlu, sel_regDes}),
 		.data_out(A),
 		.data_out2(B),
-		.data_out_jm(),
+		.data_out3(EX_addr_instr_branch),
+		.data_out_jm(offset_to_desp),
 		.funcion(inst_funcion_ex),
 		.AWrite1(AdrrDest1),
 		.AWrite2(AdrrDest2)
+	);
+	wire [ADD_INST_SIZE-1:0] instruccion_branch_to_ex_mem;
+	wire [ADD_INST_SIZE-1:0] offset_to_adder;
+	desplazar desplazador(
+		.dato(offset_to_desp),
+		.datoOut(offset_to_adder)
+	);
+	
+	sumador#(.SIZE(ADD_INST_SIZE)) sumador_despl(
+		.A(EX_addr_instr_branch),
+		.B(offset_to_adder),
+		.res(instruccion_branch_to_ex_mem)
 	);
 	
 	wire [S_OP_ALU-1:0] selector;
@@ -138,18 +162,20 @@ module NucleoTop#(parameter SIZE_DATA = 32,
 	
 	wire [SIZE_DATA-1:0]operando_B; 
 	
-	MUX mux_in_ALU(
-		.dato(32'd0),
+	MUX #(.SIZE(SIZE_DATA))mux_in_ALU(
+		.dato(offset_to_desp),
 		.dato2(B),
 		.sel(alusrc_out),
 		.datoOut(operando_B)	
 	);
 	
 	wire [SIZE_DATA-1:0] resultadoALU;
+	wire flag_zero_to_alu, flag_zero_to_branch;
 	ALU ALU(
 		.a(A),
 		.b(operando_B),
 		.operador(selector),
+		.zero(flag_zero_to_alu),
 		.resultado(resultadoALU)
 	);
 	
@@ -169,17 +195,20 @@ module NucleoTop#(parameter SIZE_DATA = 32,
 	wire [SIZE_DATA-1:0]addr_to_memory;
 	wire [SIZE_DATA-1:0] dato_escribir;
 	wire [SIZE_ADDR_BR-1:0] addr_reg_mem_wb;
+	wire [ADD_INST_SIZE-1:0] add_instruccion_to_mux;
 	EX_MEM EX_MEM(
 		.clk(clk),
 		.WB(wb_ex_mem),
 		.M(m_ex_mem),
-		.data_in(),
+		.zero_in(flag_zero_to_alu),
+		.data_in(instruccion_branch_to_ex_mem),
 		.data_in2(resultadoALU),
 		.AWriteMem_in(B),
 		.AWriteReg_in(ex_mem_addrDest),
 		.WB_out(WB_mem_wb),
-		.M_out({ex_mem_branch, memoryWrite, memoryRead}),
-		.data_out(),
+		.M_out({ex_mem_branch, memoryRead, memoryWrite}), //Antes: ex_mem_branch, memoryWrite, memoryRead
+		.zero_out(flag_zero_to_branch),
+		.data_out(add_instruccion_to_mux),
 		.data_out2(addr_to_memory),
 		.AWriteMem(dato_escribir),
 		.AWriteReg(addr_reg_mem_wb)
@@ -187,10 +216,15 @@ module NucleoTop#(parameter SIZE_DATA = 32,
 	wire [SIZE_DATA-1:0] datoLeido;
 	
 	wire branchToPC;
-	assign branchToPC = ex_mem_branch & 1'b0;
+	assign branchToPC = 0;
+	AND AND(
+		.A(ex_mem_branch),
+		.B(flag_zero_to_branch),
+		.res(branchToPC)
+	);
 	
-	MUX #(.SIZE(5))mux_branch(
-		.dato(8'b0),                    // ← Para el branch no implementado
+	MUX #(.SIZE(32))mux_branch(
+		.dato(add_instruccion_to_mux),                    // ← Para el branch no implementado
 		.dato2(addr_instruccion_in),     // ← Del sumador (PC+4)
 		.sel(branchToPC),
 		.datoOut(addr_instruccion_to_mux)

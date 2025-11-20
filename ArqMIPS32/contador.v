@@ -1,5 +1,5 @@
 module PC
-	#(parameter S_DATA = 8)
+	#(parameter S_DATA = 32)
 	(
     input clk,
     input reset,
@@ -9,7 +9,7 @@ module PC
 
 always @(posedge clk or posedge reset) begin
     if (reset) begin
-        pc_out <= 8'b0; // Reset PC to 0
+        pc_out <= 32'b0; // Reset PC to 0
     end else begin
         pc_out <= pc_in; // Update PC with input value
     end

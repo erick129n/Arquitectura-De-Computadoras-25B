@@ -18,7 +18,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module Registros
-	#(parameter S_AD = 5, S_DATA = 32, DIRECCIONES=256)
+	#(parameter S_AD = 5, S_DATA = 32, DIRECCIONES=32)
 	(
     input [S_AD-1:0] ARead1,
     input [S_AD-1:0] ARead2,
