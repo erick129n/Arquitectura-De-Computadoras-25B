@@ -1,60 +1,4 @@
-C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/MemoryData.v {1 {vlog -work work -stats=none C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/MemoryData.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module memoriaDatos
-
-Top level modules:
-	memoriaDatos
-
-} {} {}} C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/EX_MEM.v {1 {vlog -work work -stats=none C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/EX_MEM.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module EX_MEM
-
-Top level modules:
-	EX_MEM
-
-} {} {}} C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Buff.v {1 {vlog -work work -stats=none C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Buff.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module buffer
-
-Top level modules:
-	buffer
-
-} {} {}} C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/ALUcontrol.v {1 {vlog -work work -stats=none C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/ALUcontrol.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module ALUcontrol
-
-Top level modules:
-	ALUcontrol
-
-} {} {}} D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v {1 {vlog -work work -stats=none D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module NucleoTop
-
-Top level modules:
-	NucleoTop
-
-} {} {}} C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v {1 {vlog -work work -stats=none C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module NucleoTop
-
-Top level modules:
-	NucleoTop
-
-} {} {}} D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/memInstrucciones.v {1 {vlog -work work -stats=none D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/memInstrucciones.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module memoryInstructions
-
-Top level modules:
-	memoryInstructions
-
-} {} {}} D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/ID_EX.v {1 {vlog -work work -stats=none D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/ID_EX.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module ID_EX
-
-Top level modules:
-	ID_EX
-
-} {} {}} C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/memInstrucciones.v {1 {vlog -work work -stats=none C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/memInstrucciones.v
+D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/memInstrucciones.v {1 {vlog -work work -stats=none D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/memInstrucciones.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module memoryInstructions
 
@@ -75,19 +19,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	MUX
 
-} {} {}} C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/ID_EX.v {1 {vlog -work work -stats=none C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/ID_EX.v
+} {} {}} D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/AND.v {1 {vlog -work work -stats=none D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/AND.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module ID_EX
+-- Compiling module AND
 
 Top level modules:
-	ID_EX
-
-} {} {}} D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/sumador.v {1 {vlog -work work -stats=none D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/sumador.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module sumador
-
-Top level modules:
-	sumador
+	AND
 
 } {} {}} D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/IF_ID.v {1 {vlog -work work -stats=none D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/IF_ID.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -96,12 +33,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	IF_ID
 
-} {} {}} C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v {1 {vlog -work work -stats=none C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/mux.v
+} {} {}} D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/sumador.v {1 {vlog -work work -stats=none D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/sumador.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module MUX
+-- Compiling module sumador
 
 Top level modules:
-	MUX
+	sumador
 
 } {} {}} D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/NucleoTB.v {1 {vlog -work work -stats=none D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/NucleoTB.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -110,33 +47,19 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	coreTB
 
-} {} {}} C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/ALU.v {1 {vlog -work work -stats=none C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/ALU.v
+} {} {}} D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/MUX3_1.v {1 {vlog -work work -stats=none {D:\USER\Documents\Archivos\Arquitectura-De-Computadoras-25B\ArqMIPS32\MUX3_1.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module ALU
+-- Compiling module MUX3_1
 
 Top level modules:
-	ALU
+	MUX3_1
 
-} {} {}} C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/IF_ID.v {1 {vlog -work work -stats=none C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/IF_ID.v
+} {} {}} D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/UnidadEncaminamiento.v {1 {vlog -work work -stats=none {D:\USER\Documents\Archivos\Arquitectura-De-Computadoras-25B\ArqMIPS32\UnidadEncaminamiento.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module IF_ID
+-- Compiling module Forward
 
 Top level modules:
-	IF_ID
-
-} {} {}} C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/sumador.v {1 {vlog -work work -stats=none C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/sumador.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module sumador
-
-Top level modules:
-	sumador
-
-} {} {}} C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/AND.v {1 {vlog -work work -stats=none {C:\Users\Lenovo\Documents\UDG\ProyectosModelSim\ArqMIPS32\AND.v}
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module AND
-
-Top level modules:
-	AND
+	Forward
 
 } {} {}} D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/UnidadControl.v {1 {vlog -work work -stats=none D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/UnidadControl.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -145,13 +68,6 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	Control
 
-} {} {}} C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/NucleoTB.v {1 {vlog -work work -stats=none {C:\Users\Lenovo\Documents\UDG\ProyectosModelSim\ArqMIPS32\NucleoTB.v}
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module coreTB
-
-Top level modules:
-	coreTB
-
 } {} {}} D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/MEM_WB.v {1 {vlog -work work -stats=none D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/MEM_WB.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module MEM_WB
@@ -159,48 +75,27 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	MEM_WB
 
-<<<<<<< HEAD
-} {} {}} C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/UnidadControl.v {1 {vlog -work work -stats=none C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/UnidadControl.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module Control
-
-Top level modules:
-	Control
-
-} {} {}} C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/MEM_WB.v {1 {vlog -work work -stats=none C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/MEM_WB.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module MEM_WB
-
-Top level modules:
-	MEM_WB
-
-} {} {}} D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/ADD.v {1 {vlog -work work -stats=none D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/ADD.v
->>>>>>> 7d72e355022c95883a9d3b5f1c48ee315e275a68
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module ADD
-
-Top level modules:
-	ADD
-
 } {} {}} D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/desplazador.v {1 {vlog -work work -stats=none D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/desplazador.v
->>>>>>> 7d72e355022c95883a9d3b5f1c48ee315e275a68
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module desplazar
 
 Top level modules:
 	desplazar
 
-<<<<<<< HEAD
-} {} {}} D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Registros.v {1 {vlog -work work -stats=none D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Registros.v
->>>>>>> 7d72e355022c95883a9d3b5f1c48ee315e275a68
+} {} {}} D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/ADD.v {1 {vlog -work work -stats=none D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/ADD.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module Registros
+-- Compiling module ADD
 
 Top level modules:
-	Registros
+	ADD
 
-<<<<<<< HEAD
-=======
+} {} {}} D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/unidad_extesion_signo.v {1 {vlog -work work -stats=none D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/unidad_extesion_signo.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module signed_extention
+
+Top level modules:
+	signed_extention
+
 } {} {}} D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/contador.v {1 {vlog -work work -stats=none D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/contador.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module PC
@@ -208,28 +103,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	PC
 
-<<<<<<< HEAD
-} {} {}} D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/EX_MEM.v {1 {vlog -work work -stats=none D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/EX_MEM.v
+} {} {}} D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Registros.v {1 {vlog -work work -stats=none D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Registros.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module EX_MEM
+-- Compiling module Registros
 
 Top level modules:
-	EX_MEM
-
->>>>>>> 7d72e355022c95883a9d3b5f1c48ee315e275a68
-} {} {}} D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/MemoryData.v {1 {vlog -work work -stats=none D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/MemoryData.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module memoriaDatos
-
-Top level modules:
-	memoriaDatos
-
-} {} {}} D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/ALUcontrol.v {1 {vlog -work work -stats=none D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/ALUcontrol.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module ALUcontrol
-
-Top level modules:
-	ALUcontrol
+	Registros
 
 } {} {}} D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Buff.v {1 {vlog -work work -stats=none D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Buff.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -238,39 +117,25 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	buffer
 
-} {} {}} C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/ADD.v {1 {vlog -work work -stats=none C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/ADD.v
+} {} {}} D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/ALUcontrol.v {1 {vlog -work work -stats=none D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/ALUcontrol.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module ADD
+-- Compiling module ALUcontrol
 
 Top level modules:
-	ADD
+	ALUcontrol
 
-} {} {}} C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/desplazador.v {1 {vlog -work work -stats=none C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/desplazador.v
+} {} {}} D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/MemoryData.v {1 {vlog -work work -stats=none D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/MemoryData.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module desplazar
+-- Compiling module memoriaDatos
 
 Top level modules:
-	desplazar
+	memoriaDatos
 
-} {} {}} C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/unidad_extesion_signo.v {1 {vlog -work work -stats=none {C:\Users\Lenovo\Documents\UDG\ProyectosModelSim\ArqMIPS32\unidad_extesion_signo.v}
+} {} {}} D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/EX_MEM.v {1 {vlog -work work -stats=none D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/EX_MEM.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module signed_extention
+-- Compiling module EX_MEM
 
 Top level modules:
-	signed_extention
-
-} {} {}} C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/contador.v {1 {vlog -work work -stats=none C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/contador.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module PC
-
-Top level modules:
-	PC
-
-} {} {}} C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Registros.v {1 {vlog -work work -stats=none C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Registros.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module Registros
-
-Top level modules:
-	Registros
+	EX_MEM
 
 } {} {}}

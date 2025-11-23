@@ -20,8 +20,6 @@ module NucleoTop#(parameter SIZE_DATA = 32,
 	wire [SIZE_DATA-1: 0] instruccion_a_buff, out_instruccion;
 	wire [ADD_INST_SIZE-1 :0] ID_addr_instruccion_to_EX;
 
-	// ELIMINAR ESTA LÍNEA: assign addr_instruccion_in = pc_in;
-	//assign addr_instruccion_to_mux = addr_instruccion_in;
 
 	PC #(.S_DATA(ADD_INST_SIZE)) PC(
 	  .clk(clk),
@@ -32,10 +30,9 @@ module NucleoTop#(parameter SIZE_DATA = 32,
 	sumador#(.SIZE(ADD_INST_SIZE)) sumador(
 		.A(addr_instruccion_out),
 		.B(32'd4),
-		.res(addr_instruccion_in)  // ← Esta es la única fuente
+		.res(addr_instruccion_in)
 	);
 
-	// En el MUX del branch, usa addr_instruccion_in directamente
 
 	
 	memoryInstructions memoryInstructions(
@@ -74,6 +71,8 @@ module NucleoTop#(parameter SIZE_DATA = 32,
 	
 	wire [SIZE_ADDR_BR-1:0] AR1 = out_instruccion[25:21];
 	wire [SIZE_ADDR_BR-1:0] AR2 = out_instruccion[20:16];
+	wire [SIZE_ADDR_BR-1:0] IF_ID_RS = out_instruccion[25:21];
+	wire [SIZE_ADDR_BR-1:0] IF_ID_RT = out_instruccion[20:16];
 	wire [SIZE_ADDR_BR-1:0] AW = out_instruccion[15:11];
 	wire [SIZE_OP-1:0] SH = out_instruccion[10:6];
 	wire [SIZE_FUNC-1:0] inst_funcion = out_instruccion[5:0];
@@ -108,6 +107,8 @@ module NucleoTop#(parameter SIZE_DATA = 32,
 	wire [S_M-1:0] m_ex_mem;
 	wire [ADD_SIZE-1:0] offset_to_desp;
 	wire [SIZE_DATA-1:0] dato_extendido;
+	wire [SIZE_ADDR_BR-1:0] RS;
+	wire [SIZE_ADDR_BR-1:0] RT;
 	
 	signed_extention extension(
 		.half_word(inst_inmediata),
@@ -125,6 +126,8 @@ module NucleoTop#(parameter SIZE_DATA = 32,
 		.data_in2(DRead2),
 		.data_in3(ID_addr_instruccion_to_EX), //direccion de memoria para hacer branch
 		.data_extend_in(dato_extendido),
+		.if_id_Rs(IF_ID_RS),
+		.if_id_Rt(IF_ID_RT),
 		.adrWrite1(AR2),
 		.adrWrite2(AW),
 		.funcion_in(inst_funcion),
@@ -137,8 +140,34 @@ module NucleoTop#(parameter SIZE_DATA = 32,
 		.data_out_jm(offset_to_desp),
 		.funcion(inst_funcion_ex),
 		.AWrite1(AdrrDest1),
-		.AWrite2(AdrrDest2)
+		.AWrite2(AdrrDest2),
+		.Rs(RS),
+		.Rt(RT)
 	);
+	// 1. Crear las señales en EX/MEM para conectar con al unidad:
+	// 		RegWrite, la direccion de destino, la direccion de memoria que va al MUX
+	// 2. Crear la señal en MEM/WB para conectar:
+	// 		RegWrite, la direccoin de destino, conectar con la señal que va al BR
+	//3. Crear el multiplexor para el dato A:
+	//	A: directo del banco de registros. B: El resultado anterior de la ALU (al final del mux_MemoryToReg). C: El dato reciente de la ALU
+	//4. Crear el multiplexor parta el dato B:
+	//	A: directo del banco de registros. B: El resultado anterior de la ALU. C: El dato reciente de la ALU
+	
+	//5. Continuar con la lectura del libro
+	//	Mover la unidad de salto hacia el bloque de busqueda. (Esto despues de completar la unidad de encaminamiento)
+	Foward encaminador(
+		.in_RS(RS),
+		.in_RT(RT),
+		.in_ex_mem_regRd(),
+		.in_mem_wb_regRd(),
+		.EX_MEM_RegWrite(),
+		.MEM_WB_RegWrite(),
+		.ForwardA(),
+		.ForwardB()
+	
+	);
+	
+	
 	wire [ADD_INST_SIZE-1:0] instruccion_branch_to_ex_mem;
 	wire [ADD_INST_SIZE-1:0] offset_to_adder;
 	desplazar desplazador(

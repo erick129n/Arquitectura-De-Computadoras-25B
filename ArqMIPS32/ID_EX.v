@@ -14,6 +14,8 @@ module ID_EX#(parameter SIZE = 32,
     input [SIZE-1:0] data_in2,
 	input [SIZE_EXTEND-1:0] data_in3,
 	input [SIZE-1:0] data_extend_in,
+	input [ADDR_SIZE-1:0] if_id_Rs,
+	input [ADDR_SIZE-1:0] if_id_Rt,
 	input [ADDR_SIZE-1:0] adrWrite1,
 	input [ADDR_SIZE-1:0] adrWrite2,
 	input [SIZE_FNC-1:0] funcion_in,
@@ -26,7 +28,9 @@ module ID_EX#(parameter SIZE = 32,
 	output reg [SIZE-1:0] data_out_jm,
 	output reg [SIZE_FNC-1:0] funcion,
 	output reg [ADDR_SIZE-1:0] AWrite1,
-	output reg [ADDR_SIZE-1:0] AWrite2
+	output reg [ADDR_SIZE-1:0] AWrite2,
+	output reg [ADDR_SIZE-1:0] Rs,
+	output reg [ADDR_SIZE-1:0] Rt
 );
 
 always @(posedge clk) begin
@@ -40,5 +44,7 @@ always @(posedge clk) begin
 	funcion <= funcion_in;
 	AWrite1 <= adrWrite1;
 	AWrite2 <= adrWrite2;
+	Rs <= if_id_Rs;
+	Rt <= if_id_Rt;
 end
 endmodule
