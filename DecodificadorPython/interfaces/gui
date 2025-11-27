@@ -1,0 +1,596 @@
+import tkinter as tk
+from tkinter import ttk, scrolledtext, filedialog
+import tkinter.messagebox as messagebox
+import os
+import re
+
+class DecodificadorMIPS:
+    def __init__(self):
+        self.ventana = tk.Tk()
+        self.ventana.title("Decodificador de Instrucciones MIPS")
+        self.ventana.geometry("700x600")
+        
+        # Diccionarios de instrucciones
+        self.instruccion_logica_aritmetica = {
+            '100000': 'ADD', '100010': 'SUB', '100100': 'AND',
+            '100111': 'NOR', '100101': 'OR', '101010': 'SLT',
+            '000000': 'NOP'
+        }
+        
+        self.instruccion_logica_aritmetica_inmediata = {
+            '001000': 'ADDI', '001001': 'ADDIU', '001100': 'ANDI', 
+            '001101': 'ORI', '001110': 'XORI', '001010': 'SLTI',
+            '001011': 'SLTIU'
+        }
+        
+        self.instrucciones_memoria = {
+            '100011': 'LW', '101011': 'SW'
+        }
+        
+        self.instrucciones_condicionales = {
+            '000100': 'BEQ', '000101': 'BNE'
+        }
+        
+        self.instrucciones_salto = {
+            '000010': 'J', '000011': 'JAL'
+        }
+        
+        self.valor_operacion_tipo_r = '000000'
+        self.valor_shampt = '00000'
+        
+        self.crear_interfaz()
+        self.conectar_eventos()
+    
+    def crear_interfaz(self):
+        # Frame principal con scrollbar
+        main_frame = tk.Frame(self.ventana)
+        main_frame.pack(fill=tk.BOTH, expand=True)
+
+        # Canvas y scrollbar para la ventana principal
+        self.canvas = tk.Canvas(main_frame)
+        self.scrollbar = ttk.Scrollbar(main_frame, orient=tk.VERTICAL, command=self.canvas.yview)
+        self.scrollable_frame = ttk.Frame(self.canvas)
+
+        self.scrollable_frame.bind(
+            "<Configure>",
+            lambda e: self.canvas.configure(scrollregion=self.canvas.bbox("all"))
+        )
+
+        self.canvas.create_window((0, 0), window=self.scrollable_frame, anchor="nw")
+        self.canvas.configure(yscrollcommand=self.scrollbar.set)
+
+        self.canvas.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        self.scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+
+        # Campo de entrada
+        self.crear_campo_entrada()
+        
+        # Botones
+        self.crear_botones()
+        
+        # Campos de salida
+        self.crear_campos_salida()
+        
+        # Configurar scroll con rueda del mouse
+        self.configurar_scroll_mouse()
+    
+    def crear_campo_entrada(self):
+        # Campo de entrada
+        instruccion_assembly_label = tk.Label(self.scrollable_frame, text="Instrucción en ensamblador:")
+        instruccion_assembly_label.grid(row=0, column=0, sticky="w", padx=20, pady=(20, 5))
+
+        # Frame para el cuadro de texto de entrada con scrollbar
+        input_frame = tk.Frame(self.scrollable_frame)
+        input_frame.grid(row=1, column=0, sticky="w", padx=20, pady=(0, 10))
+
+        self.in_assembly = tk.Text(input_frame, height=5, width=40)
+        self.in_assembly_scrollbar = ttk.Scrollbar(input_frame, command=self.in_assembly.yview)
+        self.in_assembly.configure(yscrollcommand=self.in_assembly_scrollbar.set)
+
+        self.in_assembly.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        self.in_assembly_scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+    
+    def crear_botones(self):
+        # Botones
+        button_frame = tk.Frame(self.scrollable_frame)
+        button_frame.grid(row=1, column=1, padx=20, pady=(0, 10))
+
+        self.abrir_button = ttk.Button(button_frame, text="Abrir Archivo", command=self.abrir_archivo)
+        self.abrir_button.pack(pady=5)
+
+        self.guardar_button = ttk.Button(button_frame, text="Guardar Instrucciones", command=self.guardar_instrucciones)
+        self.guardar_button.pack(pady=5)
+
+        self.convertir_button = ttk.Button(button_frame, text="Convertir", command=self.convertir)
+        self.convertir_button.pack(pady=5)
+
+        self.exportar_button = ttk.Button(button_frame, text="Exportar Memoria", command=self.exportar_a_archivo)
+        self.exportar_button.pack(pady=5)
+
+        self.convertir_binario_assembly = ttk.Button(button_frame, text="Binario a Ensamblador", command=self.binario_a_ensamblador)
+        self.convertir_binario_assembly.pack(pady=5)
+
+        # Información sobre instrucciones soportadas
+        info_label = tk.Label(button_frame, 
+                             text="\nInstrucciones soportadas:\n"
+                                  "Tipo R: ADD, SUB, AND, NOR, OR, SLT, NOP\n"
+                                  "Tipo I: ADDI, ADDIU, ANDI, ORI, XORI, SLTI, SLTIU\n"
+                                  "Memoria: LW, SW\n"
+                                  "Salto Condicional: BEQ, BNE\n"
+                                  "Salto Incondicional: J, JAL\n\n"
+                                  "Registros especiales:\n"
+                                  "$zero o $0 = registro constante 0", 
+                             justify=tk.LEFT, font=("Arial", 8))
+        info_label.pack(pady=10)
+    
+    def crear_campos_salida(self):
+        # Campo de salida - Instrucción convertida
+        instruccion_convertida_label = tk.Label(self.scrollable_frame, text="Instrucción convertida (32 bits):")
+        instruccion_convertida_label.grid(row=2, column=0, sticky="w", padx=20, pady=(5, 2))
+
+        # Frame para el cuadro de texto de instrucción convertida con scrollbar
+        instruccion_frame = tk.Frame(self.scrollable_frame)
+        instruccion_frame.grid(row=3, column=0, sticky="w", padx=20, pady=(0, 10))
+
+        self.instruccion_convertida_text = tk.Text(instruccion_frame, height=5, width=33)
+        self.instruccion_scrollbar = ttk.Scrollbar(instruccion_frame, command=self.instruccion_convertida_text.yview)
+        self.instruccion_convertida_text.configure(yscrollcommand=self.instruccion_scrollbar.set)
+
+        self.instruccion_convertida_text.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        self.instruccion_scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+
+        # Campo de memoria
+        memoria_label = tk.Label(self.scrollable_frame, text="Memoria (bytes):")
+        memoria_label.grid(row=2, column=1, sticky="w", padx=20, pady=(10, 5))
+
+        # Frame para el cuadro de texto de memoria con scrollbar
+        memoria_frame = tk.Frame(self.scrollable_frame)
+        memoria_frame.grid(row=3, column=1, sticky="w", padx=20, pady=(0, 10))
+
+        self.memoria_text = tk.Text(memoria_frame, height=15, width=33)
+        self.memoria_scrollbar = ttk.Scrollbar(memoria_frame, command=self.memoria_text.yview)
+        self.memoria_text.configure(yscrollcommand=self.memoria_scrollbar.set)
+
+        self.memoria_text.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        self.memoria_scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+    
+    def configurar_scroll_mouse(self):
+        def _on_mousewheel(event):
+            self.canvas.yview_scroll(int(-1*(event.delta/120)), "units")
+        self.canvas.bind_all("<MouseWheel>", _on_mousewheel)
+    
+    def conectar_eventos(self):
+        # Los eventos ya están conectados en la creación de botones
+        pass
+    
+    # Funciones auxiliares
+    def limpiar_dato(self, dato):
+        return dato.replace('$', '').replace(',', '').replace(';', '').strip()
+
+    def extraer_elementos(self, linea):
+        partes = linea.strip().split()
+        if not partes:
+            return None, []
+        instruccion = partes[0].upper()
+        datos = [self.limpiar_dato(p) for p in partes[1:] if self.limpiar_dato(p)]
+        return instruccion, datos
+
+    def obtener_codigo_binario(self, instruccion):
+        for clave, valor in self.instruccion_logica_aritmetica.items():
+            if valor == instruccion:
+                return ('R', clave)
+        for clave, valor in self.instruccion_logica_aritmetica_inmediata.items():
+            if valor == instruccion:
+                return ('I', clave)
+        for clave, valor in self.instrucciones_memoria.items():
+            if valor == instruccion:
+                return ('M', clave)
+        for clave, valor in self.instrucciones_condicionales.items():
+            if valor == instruccion:
+                return ('C', clave)
+        for clave, valor in self.instrucciones_salto.items():
+            if valor == instruccion:
+                return ('J', clave)
+        return (None, None)
+
+    def convertir_a_binario(self, numero, bits=5):
+        if isinstance(numero, str) and numero.upper() == 'ZERO':
+            return format(0, f'0{bits}b')
+        return format(int(numero), f'0{bits}b')
+
+    def convertir_inmediato_a_binario(self, numero, bits=16):
+        num = int(numero)
+        if num < 0:
+            return format((1 << bits) + num, f'0{bits}b')
+        else:
+            return format(num, f'0{bits}b')
+
+    def convertir_desplazamiento_a_binario(self, numero, bits=16):
+        num = int(numero)
+        desplazamiento = num // 4
+        return self.convertir_inmediato_a_binario(desplazamiento, bits)
+
+    def convertir_direccion_a_binario(self, numero, bits=26):
+        num = int(numero)
+        direccion = num // 4
+        return format(direccion, f'0{bits}b')
+
+    def dividir_en_bytes(self, binario):
+        bytes_list = [binario[i:i+8] for i in range(0, len(binario), 8)]
+        return '\n'.join(bytes_list)
+
+    def parsear_instruccion_memoria(self, datos):
+        if len(datos) < 2:
+            return None, None, None
+        rt = datos[0]
+        match = re.match(r'(\-?\d+)\((\d+)\)', datos[1])
+        if match:
+            offset = match.group(1)
+            rs = match.group(2)
+            return rt, rs, offset
+        else:
+            if len(datos) >= 3:
+                return datos[0], datos[2], datos[1]
+        return None, None, None
+
+    # Funciones principales
+    def convertir(self):
+        texto = self.in_assembly.get("1.0", tk.END).strip()
+        lineas = texto.splitlines()
+        self.instruccion_convertida_text.delete("1.0", tk.END)
+        self.memoria_text.delete("1.0", tk.END)
+
+        for linea in lineas:
+            if not linea.strip():
+                continue
+
+            instruccion, datos = self.extraer_elementos(linea)
+            if not instruccion:
+                messagebox.showerror("Error", f"Línea inválida: {linea}")
+                continue
+
+            # Manejar instrucción NOP
+            if instruccion == 'NOP':
+                instruccion_final = '00000000000000000000000000000000'
+            
+            else:
+                tipo, codigo = self.obtener_codigo_binario(instruccion)
+                if not tipo or not codigo:
+                    messagebox.showerror("Error", f"Instrucción desconocida: {instruccion}")
+                    continue
+
+                if tipo == 'R':
+                    if len(datos) < 3:
+                        messagebox.showerror("Error", f"Instrucción tipo R requiere 3 operandos: {linea}")
+                        continue
+                    
+                    rd = self.convertir_a_binario(datos[0])
+                    rs = self.convertir_a_binario(datos[1])
+                    rt = self.convertir_a_binario(datos[2])
+                    instruccion_final = self.valor_operacion_tipo_r + rs + rt + rd + self.valor_shampt + codigo
+
+                elif tipo == 'I':
+                    if len(datos) < 3:
+                        messagebox.showerror("Error", f"Instrucción tipo I requiere 3 operandos: {linea}")
+                        continue
+                    
+                    rt = self.convertir_a_binario(datos[0])
+                    rs = self.convertir_a_binario(datos[1])
+                    inmediato = self.convertir_inmediato_a_binario(datos[2])
+                    instruccion_final = codigo + rs + rt + inmediato
+
+                elif tipo == 'M':
+                    rt, rs, offset = self.parsear_instruccion_memoria(datos)
+                    if rt is None or rs is None or offset is None:
+                        messagebox.showerror("Error", f"Formato inválido para {instruccion}. Use: {instruccion} $t, offset($s)")
+                        continue
+
+                    rt_bin = self.convertir_a_binario(rt)
+                    rs_bin = self.convertir_a_binario(rs)
+                    offset_bin = self.convertir_inmediato_a_binario(offset)
+                    instruccion_final = codigo + rs_bin + rt_bin + offset_bin
+
+                elif tipo == 'C':
+                    if len(datos) < 3:
+                        messagebox.showerror("Error", f"Instrucción {instruccion} requiere 3 operandos: {linea}")
+                        continue
+                    
+                    rs = self.convertir_a_binario(datos[0])
+                    rt = self.convertir_a_binario(datos[1])
+                    desplazamiento = self.convertir_desplazamiento_a_binario(datos[2])
+                    instruccion_final = codigo + rs + rt + desplazamiento
+
+                elif tipo == 'J':
+                    if len(datos) < 1:
+                        messagebox.showerror("Error", f"Instrucción {instruccion} requiere 1 operando: {linea}")
+                        continue
+                    
+                    direccion = self.convertir_direccion_a_binario(datos[0])
+                    instruccion_final = codigo + direccion
+
+                else:
+                    messagebox.showerror("Error", f"Tipo de instrucción no soportado: {tipo}")
+                    continue
+
+            binario_en_bytes = self.dividir_en_bytes(instruccion_final)
+            self.instruccion_convertida_text.insert(tk.END, instruccion_final + "\n")
+            self.memoria_text.insert(tk.END, binario_en_bytes + "\n")
+
+    def binario_a_ensamblador(self):
+        texto_binario = self.instruccion_convertida_text.get("1.0", tk.END).strip()
+        
+        if not texto_binario:
+            messagebox.showwarning("Advertencia", "No hay código binario para convertir")
+            return
+        
+        lineas_binario = texto_binario.splitlines()
+        resultado_ensamblador = ""
+        resultado_memoria = ""
+        
+        for binario in lineas_binario:
+            if len(binario) != 32:
+                messagebox.showerror("Error", f"Instrucción binaria inválida: {binario}")
+                continue
+            
+            opcode = binario[0:6]
+            
+            if opcode == '000000':
+                rs = binario[6:11]
+                rt = binario[11:16]
+                rd = binario[16:21]
+                shamt = binario[21:26]
+                funct = binario[26:32]
+                
+                instruccion = None
+                for clave, valor in self.instruccion_logica_aritmetica.items():
+                    if clave == funct:
+                        instruccion = valor
+                        break
+                
+                if not instruccion:
+                    messagebox.showerror("Error", f"Instrucción desconocida para funct: {funct}")
+                    continue
+                
+                try:
+                    reg_rd = int(rd, 2)
+                    reg_rs = int(rs, 2)
+                    reg_rt = int(rt, 2)
+                except ValueError:
+                    messagebox.showerror("Error", f"Error al convertir registros en: {binario}")
+                    continue
+                
+                linea_ensamblador = f"{instruccion} ${reg_rd}, ${reg_rs}, ${reg_rt}"
+                
+            elif opcode in ['000010', '000011']:
+                direccion_bin = binario[6:32]
+                
+                instruccion = None
+                for clave, valor in self.instrucciones_salto.items():
+                    if clave == opcode:
+                        instruccion = valor
+                        break
+                
+                if not instruccion:
+                    messagebox.showerror("Error", f"Instrucción desconocida para opcode: {opcode}")
+                    continue
+                
+                try:
+                    direccion_valor = int(direccion_bin, 2)
+                    direccion_bytes = direccion_valor * 4
+                except ValueError:
+                    messagebox.showerror("Error", f"Error al convertir dirección en: {binario}")
+                    continue
+                
+                linea_ensamblador = f"{instruccion} {direccion_bytes}"
+                
+            else:
+                rs = binario[6:11]
+                rt = binario[11:16]
+                inmediato = binario[16:32]
+                
+                instruccion = None
+                tipo_instruccion = None
+                
+                for clave, valor in self.instruccion_logica_aritmetica_inmediata.items():
+                    if clave == opcode:
+                        instruccion = valor
+                        tipo_instruccion = 'A'
+                        break
+                
+                if not instruccion:
+                    for clave, valor in self.instrucciones_memoria.items():
+                        if clave == opcode:
+                            instruccion = valor
+                            tipo_instruccion = 'M'
+                            break
+                
+                if not instruccion:
+                    for clave, valor in self.instrucciones_condicionales.items():
+                        if clave == opcode:
+                            instruccion = valor
+                            tipo_instruccion = 'C'
+                            break
+                
+                if not instruccion:
+                    messagebox.showerror("Error", f"Instrucción desconocida para opcode: {opcode}")
+                    continue
+                
+                try:
+                    reg_rs = int(rs, 2)
+                    reg_rt = int(rt, 2)
+                    
+                    imm_valor = int(inmediato, 2)
+                    if inmediato[0] == '1':
+                        imm_valor = imm_valor - (1 << 16)
+                    
+                except ValueError:
+                    messagebox.showerror("Error", f"Error al convertir registros/inmediato en: {binario}")
+                    continue
+                
+                if tipo_instruccion == 'A':
+                    linea_ensamblador = f"{instruccion} ${reg_rt}, ${reg_rs}, {imm_valor}"
+                elif tipo_instruccion == 'M':
+                    linea_ensamblador = f"{instruccion} ${reg_rt}, {imm_valor}(${reg_rs})"
+                elif tipo_instruccion == 'C':
+                    direccion = imm_valor * 4
+                    linea_ensamblador = f"{instruccion} ${reg_rs}, ${reg_rt}, {direccion}"
+            
+            resultado_ensamblador += linea_ensamblador + "\n"
+            binario_en_bytes = self.dividir_en_bytes(binario)
+            resultado_memoria += binario_en_bytes + "\n\n"
+        
+        self.in_assembly.delete("1.0", tk.END)
+        self.in_assembly.insert("1.0", resultado_ensamblador.strip())
+        
+        self.memoria_text.delete("1.0", tk.END)
+        self.memoria_text.insert("1.0", resultado_memoria.strip())
+        
+        messagebox.showinfo("Éxito", "Conversión completada correctamente")
+
+    # Funciones de archivos
+    def abrir_archivo(self):
+        archivo = filedialog.askopenfilename(
+            title="Abrir archivo",
+            filetypes=[("Archivos de texto", "*.txt"), ("Todos los archivos", "*.*")]
+        )
+        
+        if not archivo:
+            return
+        
+        try:
+            with open(archivo, "r", encoding="utf-8") as f:
+                contenido = f.read().strip()
+            
+            if not contenido:
+                messagebox.showwarning("Advertencia", "El archivo está vacío")
+                return
+            
+            respuesta = messagebox.askyesno(
+                "Cargar archivo",
+                f"¿Desea cargar el contenido del archivo '{os.path.basename(archivo)}' al programa?\n\n"
+                "Nota: Esto reemplazará el contenido actual en el campo de ensamblador."
+            )
+            
+            if respuesta:
+                self.in_assembly.delete("1.0", tk.END)
+                self.in_assembly.insert("1.0", contenido)
+                messagebox.showinfo("Éxito", "Archivo cargado correctamente")
+            
+        except FileNotFoundError:
+            messagebox.showerror("Error", "El archivo no fue encontrado")
+        except PermissionError:
+            messagebox.showerror("Error", "No tiene permisos para leer este archivo")
+        except UnicodeDecodeError:
+            messagebox.showerror("Error", "Error al leer el archivo. Formato no compatible")
+        except Exception as e:
+            messagebox.showerror("Error", f"Error inesperado al abrir el archivo:\n{str(e)}")
+
+    def guardar_instrucciones(self):
+        contenido_ensamblador = self.in_assembly.get("1.0", tk.END).strip()
+        
+        if not contenido_ensamblador:
+            messagebox.showwarning("Advertencia", "No hay instrucciones para guardar")
+            return
+        
+        opcion_guardar = messagebox.askyesno(
+            "Guardar instrucciones",
+            "¿Desea seleccionar un archivo existente para sobrescribir?\n\n"
+            "Sí: Seleccionar archivo existente para sobrescribir\n"
+            "No: Crear nuevo archivo"
+        )
+        
+        if opcion_guardar:
+            archivo = filedialog.askopenfilename(
+                title="Seleccionar archivo para sobrescribir (Instrucciones)",
+                filetypes=[("Archivos de texto", "*.txt"), ("Todos los archivos", "*.*")]
+            )
+        else:
+            archivo = filedialog.asksaveasfilename(
+                title="Guardar como nuevo archivo (Instrucciones)",
+                defaultextension=".txt",
+                filetypes=[("Archivos de texto", "*.txt"), ("Todos los archivos", "*.*")],
+                initialfile="instrucciones_mips.txt"
+            )
+        
+        if not archivo:
+            return
+        
+        try:
+            if not opcion_guardar and os.path.exists(archivo):
+                respuesta = messagebox.askyesno(
+                    "Archivo existente", 
+                    f"El archivo '{os.path.basename(archivo)}' ya existe.\n¿Desea sobrescribirlo?"
+                )
+                if not respuesta:
+                    return
+            
+            with open(archivo, "w", encoding="utf-8") as f:
+                f.write(contenido_ensamblador)
+            
+            messagebox.showinfo("Éxito", f"Instrucciones guardadas en:\n{archivo}")
+            
+        except PermissionError:
+            messagebox.showerror("Error", "No tiene permisos para guardar en esta ubicación")
+        except OSError as e:
+            messagebox.showerror("Error", f"No se pudo guardar el archivo:\n{str(e)}")
+        except Exception as e:
+            messagebox.showerror("Error", f"Error inesperado:\n{str(e)}")
+
+    def exportar_a_archivo(self):
+        contenido_memoria = self.memoria_text.get("1.0", tk.END).strip()
+        
+        if not contenido_memoria:
+            messagebox.showwarning("Advertencia", "No hay contenido en Memoria para exportar")
+            return
+        
+        opcion_guardar = messagebox.askyesno(
+            "Guardar archivo",
+            "¿Desea seleccionar un archivo existente para sobrescribir?\n\n"
+            "Sí: Seleccionar archivo existente para sobrescribir\n"
+            "No: Crear nuevo archivo"
+        )
+        
+        if opcion_guardar:
+            archivo = filedialog.askopenfilename(
+                title="Seleccionar archivo para sobrescribir (Memoria)",
+                filetypes=[("Archivos de texto", "*.txt"), ("Todos los archivos", "*.*")]
+            )
+        else:
+            archivo = filedialog.asksaveasfilename(
+                title="Guardar como nuevo archivo (Memoria)",
+                defaultextension=".txt",
+                filetypes=[("Archivos de texto", "*.txt"), ("Todos los archivos", "*.*")],
+                initialfile="memoria_instrucciones.txt"
+            )
+        
+        if not archivo:
+            return
+        
+        try:
+            if not opcion_guardar and os.path.exists(archivo):
+                respuesta = messagebox.askyesno(
+                    "Archivo existente", 
+                    f"El archivo '{os.path.basename(archivo)}' ya existe.\n¿Desea sobrescribirlo?"
+                )
+                if not respuesta:
+                    return
+            
+            with open(archivo, "w", encoding="utf-8") as f:
+                f.write(contenido_memoria)
+            
+            messagebox.showinfo("Éxito", f"Contenido de Memoria guardado en:\n{archivo}")
+            
+        except PermissionError:
+            messagebox.showerror("Error", "No tiene permisos para guardar en esta ubicación")
+        except OSError as e:
+            messagebox.showerror("Error", f"No se pudo guardar el archivo:\n{str(e)}")
+        except Exception as e:
+            messagebox.showerror("Error", f"Error inesperado:\n{str(e)}")
+
+    def ejecutar(self):
+        self.ventana.mainloop()
+
+# Para usar esta clase desde main.py
+if __name__ == "__main__":
+    app = DecodificadorMIPS()
+    app.ejecutar()

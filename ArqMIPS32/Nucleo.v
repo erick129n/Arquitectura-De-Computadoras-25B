@@ -57,6 +57,9 @@ module NucleoTop#(parameter SIZE_DATA = 32,
 	wire MemRead;
 	wire MemWrite;
 	wire Mem_to_Reg;
+	
+	wire WE_encaminamiento = writeEn;
+	
 	Control Control(
 		.instruccion(OP),
 		.RegDest(RegDest),
@@ -85,6 +88,7 @@ module NucleoTop#(parameter SIZE_DATA = 32,
 	
 	wire [SIZE_ADDR_BR-1:0] AWR;
 	wire [SIZE_DATA-1:0] Data_Reg;
+	wire [SIZE_DATA-1:0] Data_reg_to_mux = Data_Reg;
 	Registros BR(
 		.ARead1(AR1),
 		.ARead2(AR2),
@@ -110,6 +114,10 @@ module NucleoTop#(parameter SIZE_DATA = 32,
 	wire [SIZE_ADDR_BR-1:0] RS;
 	wire [SIZE_ADDR_BR-1:0] RT;
 	
+	wire [SIZE_ADDR_BR-1:0] ex_mem_registerRd; // cable que conecta la direccion a la unidad de encaminamiento
+	wire [SIZE_ADDR_BR-1:0] addr_reg_mem_wb; // cable que va al buffer MEM/WB
+	
+	assign ex_mem_registerRd = addr_reg_mem_wb; // conectando los cables
 	signed_extention extension(
 		.half_word(inst_inmediata),
 		.word(dato_extendido)
@@ -134,8 +142,8 @@ module NucleoTop#(parameter SIZE_DATA = 32,
 		.WB_out(wb_ex_mem),
 		.M_out(m_ex_mem),
 		.EX_out({alusrc_out, opeAlu, sel_regDes}),
-		.data_out(A),
-		.data_out2(B),
+		.data_out(A), // Valor salido del banco de registros A
+		.data_out2(B), // Valor salido del banco de registros B
 		.data_out3(EX_addr_instr_branch),
 		.data_out_jm(offset_to_desp),
 		.funcion(inst_funcion_ex),
@@ -144,26 +152,24 @@ module NucleoTop#(parameter SIZE_DATA = 32,
 		.Rs(RS),
 		.Rt(RT)
 	);
-	// 1. Crear las señales en EX/MEM para conectar con al unidad:
-	// 		RegWrite, la direccion de destino, la direccion de memoria que va al MUX
-	// 2. Crear la señal en MEM/WB para conectar:
-	// 		RegWrite, la direccoin de destino, conectar con la señal que va al BR
-	//3. Crear el multiplexor para el dato A:
-	//	A: directo del banco de registros. B: El resultado anterior de la ALU (al final del mux_MemoryToReg). C: El dato reciente de la ALU
-	//4. Crear el multiplexor parta el dato B:
-	//	A: directo del banco de registros. B: El resultado anterior de la ALU. C: El dato reciente de la ALU
+	wire [SIZE_ADDR_BR-1:0] mem_wb_registerRd;
+	assign AWR = mem_wb_registerRd; // coneccion con: mem_wb_registerRd con AdrressWriteRegister 
+	wire WE_ex_mem_encaminamiento;
+	wire sel_mux_alu_A;
+	wire sel_mux_alu_B;
+	wire [1:0] ForwardA, ForwardB;
 	
-	//5. Continuar con la lectura del libro
-	//	Mover la unidad de salto hacia el bloque de busqueda. (Esto despues de completar la unidad de encaminamiento)
-	Foward encaminador(
+	wire [SIZE_DATA-1:0]addr_to_memory;
+	wire [SIZE_DATA-1:0] dato_to_mux_from_ex_mem = addr_to_memory;
+	Forward encaminador(
 		.in_RS(RS),
 		.in_RT(RT),
-		.in_ex_mem_regRd(),
-		.in_mem_wb_regRd(),
-		.EX_MEM_RegWrite(),
-		.MEM_WB_RegWrite(),
-		.ForwardA(),
-		.ForwardB()
+		.in_ex_mem_regRd(ex_mem_registerRd),
+		.in_mem_wb_regRd(mem_wb_registerRd),
+		.EX_MEM_RegWrite(WE_ex_mem_encaminamiento),
+		.MEM_WB_RegWrite(WE_encaminamiento),
+		.ForwardA(ForwardA),
+		.ForwardB(ForwardB)
 	
 	);
 	
@@ -191,17 +197,37 @@ module NucleoTop#(parameter SIZE_DATA = 32,
 	
 	wire [SIZE_DATA-1:0]operando_B; 
 	
+
+	wire [SIZE_DATA-1:0] resultadoALU;
+	wire flag_zero_to_alu, flag_zero_to_branch;
+	wire [SIZE_DATA-1:0] operando_A;
+	wire [SIZE_DATA-1:0] dato_B_to_ALUsrc;
+	
+	MUX3_1 datoA(
+		.A(A),
+		.B(Data_reg_to_mux),
+		.C(dato_to_mux_from_ex_mem),
+		.Forward(ForwardA),
+		.dato(operando_A)
+	);
+	MUX3_1 datoB(
+		.A(B),
+		.B(Data_reg_to_mux),
+		.C(dato_to_mux_from_ex_mem),
+		.Forward(ForwardB),
+		.dato(dato_B_to_ALUsrc)
+	);
+	
 	MUX #(.SIZE(SIZE_DATA))mux_in_ALU(
 		.dato(offset_to_desp),
-		.dato2(B),
+		.dato2(dato_B_to_ALUsrc), // dato B que entra al ALUSrc
 		.sel(alusrc_out),
 		.datoOut(operando_B)	
 	);
 	
-	wire [SIZE_DATA-1:0] resultadoALU;
-	wire flag_zero_to_alu, flag_zero_to_branch;
+	
 	ALU ALU(
-		.a(A),
+		.a(operando_A),
 		.b(operando_B),
 		.operador(selector),
 		.zero(flag_zero_to_alu),
@@ -221,10 +247,12 @@ module NucleoTop#(parameter SIZE_DATA = 32,
 	wire [S_WB-1:0] WB_mem_wb;
 	wire memoryWrite;
 	wire memoryRead;
-	wire [SIZE_DATA-1:0]addr_to_memory;
+
 	wire [SIZE_DATA-1:0] dato_escribir;
-	wire [SIZE_ADDR_BR-1:0] addr_reg_mem_wb;
+	
 	wire [ADD_INST_SIZE-1:0] add_instruccion_to_mux;
+	
+
 	EX_MEM EX_MEM(
 		.clk(clk),
 		.WB(wb_ex_mem),
@@ -243,7 +271,7 @@ module NucleoTop#(parameter SIZE_DATA = 32,
 		.AWriteReg(addr_reg_mem_wb)
 	);
 	wire [SIZE_DATA-1:0] datoLeido;
-	
+	assign WE_ex_mem_encaminamiento = WB_mem_wb[1];
 	wire branchToPC;
 	assign branchToPC = 0;
 	AND AND(
@@ -279,7 +307,7 @@ module NucleoTop#(parameter SIZE_DATA = 32,
 		.WB_out({writeEn, MemToReg}),
 		.datoLeido_out(Dato_leido1),
 		.direccion_out(Dato_leido2),
-		.direccionRegistro_out(AWR)
+		.direccionRegistro_out(mem_wb_registerRd)
 	);
 	
 	MUX mux_MemoryToReg(

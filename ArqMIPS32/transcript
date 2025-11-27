@@ -1,10 +1,319 @@
-# 0 compiles, 20 failed with no errors.
-# Error opening C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/ADD.v
-# Path name 'C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/ADD.v' doesn't exist.
-# Error opening C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/ADD.v
-# Path name 'C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/ADD.v' doesn't exist.
-# Error opening C:\Users\Lenovo\Documents\UDG\ProyectosModelSim\ArqMIPS32\Buff.v
-# Path name 'C:\Users\Lenovo\Documents\UDG\ProyectosModelSim\ArqMIPS32\Buff.v' doesn't exist.
+# Compile of MemoryData.v was successful.
+vsim work.coreTB
+# vsim work.coreTB 
+# Start time: 10:59:13 on Nov 26,2025
+# Loading work.coreTB
+# Loading work.NucleoTop
+# Loading work.PC
+# Loading work.sumador
+# Loading work.memoryInstructions
+# Loading work.IF_ID
+# Loading work.Control
+# Loading work.Registros
+# Loading work.signed_extention
+# Loading work.ID_EX
+# Loading work.Forward
+# Loading work.desplazar
+# Loading work.ALUcontrol
+# Loading work.MUX3_1
+# Loading work.MUX
+# Loading work.ALU
+# Loading work.EX_MEM
+# Loading work.AND
+# Loading work.memoriaDatos
+# Loading work.MEM_WB
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of MemoryData.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.memoriaDatos
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+# Compile of MemoryData.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.memoriaDatos
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of MemoryData.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.memoriaDatos
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+add wave -position insertpoint  \
+sim:/coreTB/DUT/PC/clk
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Lenovo  Hostname: DESKTOP-M9T7LNH  ProcessID: 12512
+#           Attempting to use alternate WLF file "./wlft6wet1t".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft6wet1t
+add wave -position insertpoint  \
+sim:/coreTB/DUT/memoryInstructions/instruction
+add wave -position insertpoint  \
+sim:/coreTB/DUT/Control/MemWrite \
+sim:/coreTB/DUT/Control/RegWrite
+add wave -position insertpoint  \
+sim:/coreTB/DUT/BR/ARead1 \
+sim:/coreTB/DUT/BR/ARead2 \
+sim:/coreTB/DUT/BR/DRead1 \
+sim:/coreTB/DUT/BR/DRead2
+add wave -position insertpoint  \
+sim:/coreTB/DUT/encaminador/in_RS \
+sim:/coreTB/DUT/encaminador/in_RT \
+sim:/coreTB/DUT/encaminador/in_ex_mem_regRd \
+sim:/coreTB/DUT/encaminador/in_mem_wb_regRd \
+sim:/coreTB/DUT/encaminador/EX_MEM_RegWrite \
+sim:/coreTB/DUT/encaminador/MEM_WB_RegWrite \
+sim:/coreTB/DUT/encaminador/ForwardA \
+sim:/coreTB/DUT/encaminador/ForwardB
+add wave -position insertpoint  \
+sim:/coreTB/DUT/datoA/A \
+sim:/coreTB/DUT/datoA/B \
+sim:/coreTB/DUT/datoA/C \
+sim:/coreTB/DUT/datoA/Forward \
+sim:/coreTB/DUT/datoA/dato
+add wave -position insertpoint  \
+sim:/coreTB/DUT/datoB/A \
+sim:/coreTB/DUT/datoB/B \
+sim:/coreTB/DUT/datoB/C \
+sim:/coreTB/DUT/datoB/Forward \
+sim:/coreTB/DUT/datoB/dato
+add wave -position insertpoint  \
+sim:/coreTB/DUT/mux_in_ALU/dato \
+sim:/coreTB/DUT/mux_in_ALU/dato2 \
+sim:/coreTB/DUT/mux_in_ALU/datoOut
+add wave -position insertpoint  \
+sim:/coreTB/DUT/ALU/a \
+sim:/coreTB/DUT/ALU/b \
+sim:/coreTB/DUT/ALU/resultado
+add wave -position insertpoint  \
+sim:/coreTB/DUT/memoriaDatos/address \
+sim:/coreTB/DUT/memoriaDatos/dato \
+sim:/coreTB/DUT/memoriaDatos/MemWrite
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of MemoryData.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.memoriaDatos
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+restart
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of MemoryData.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.memoriaDatos
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+# Compile of MemoryData.v was successful.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.memoriaDatos
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of desplazador.v was successful.
+# Compile of UnidadControl.v failed with 1 errors.
+# Compile of UnidadControl.v was successful.
+# Compile of Nucleo.v was successful.
+# Compile of UnidadControl.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.NucleoTop
+# Loading work.Control
+# Loading work.desplazar
+# ** Error: (vsim-3063) Port 'JumpRegister' not found in the connected module (11th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/Control File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 66
+# Compile of Nucleo.v was successful.
+# Break key hit
+# Load canceled
+# Compile of Nucleo.v was successful.
+vsim work.coreTB
+# vsim work.coreTB 
+# Start time: 10:59:13 on Nov 26,2025
+# Loading work.coreTB
+# Loading work.NucleoTop
+# Loading work.PC
+# Loading work.sumador
+# Loading work.memoryInstructions
+# Loading work.IF_ID
+# Loading work.Control
+# Loading work.Registros
+# Loading work.signed_extention
+# Loading work.ID_EX
+# Loading work.Forward
+# Loading work.desplazar
+# Loading work.ALUcontrol
+# Loading work.MUX3_1
+# Loading work.MUX
+# Loading work.ALU
+# Loading work.EX_MEM
+# Loading work.AND
+# Loading work.memoriaDatos
+# Loading work.MEM_WB
+# ** Error: (vsim-3063) Port 'JumpRegister' not found in the connected module (11th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/Control File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 66
+# Error loading design
+# End time: 07:58:07 on Nov 27,2025, Elapsed time: 20:58:54
+# Errors: 2, Warnings: 3
+# Compile of UnidadControl.v was successful.
+# Compile of UnidadControl.v was successful.
 # Compile of ADD.v was successful.
 # Compile of ALU.v was successful.
 # Compile of ALUcontrol.v was successful.
@@ -19,16 +328,19 @@
 # Compile of memInstrucciones.v was successful.
 # Compile of MemoryData.v was successful.
 # Compile of mux.v was successful.
+# Compile of MUX3_1.v was successful.
 # Compile of Nucleo.v was successful.
 # Compile of NucleoTB.v was successful.
 # Compile of Registros.v was successful.
 # Compile of sumador.v was successful.
 # Compile of unidad_extesion_signo.v was successful.
 # Compile of UnidadControl.v was successful.
-# 20 compiles, 0 failed with no errors.
+# Compile of UnidadEncaminamiento.v was successful.
+# 22 compiles, 0 failed with no errors.
+# Break key hit
 vsim work.coreTB
 # vsim work.coreTB 
-# Start time: 18:49:36 on Nov 22,2025
+# Start time: 07:59:21 on Nov 27,2025
 # Loading work.coreTB
 # Loading work.NucleoTop
 # Loading work.PC
@@ -39,13 +351,67 @@ vsim work.coreTB
 # Loading work.Registros
 # Loading work.signed_extention
 # Loading work.ID_EX
+# Loading work.Forward
 # Loading work.desplazar
 # Loading work.ALUcontrol
+# Loading work.MUX3_1
 # Loading work.MUX
 # Loading work.ALU
 # Loading work.EX_MEM
 # Loading work.AND
 # Loading work.memoriaDatos
 # Loading work.MEM_WB
-# Compile of UnidadEncaminamiento.v was successful.
-# Compile of MUX3_1.v was successful.
+# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'JumpRegister'.
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/Control File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 66
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'JumpRegister'. The port definition is at: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/UnidadControl.v(15).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/Control File: C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/Nucleo.v Line: 66
+# Error loading design
+# End time: 07:59:22 on Nov 27,2025, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 5
+# Compile of UnidadControl.v was successful.
+# Compile of Nucleo.v failed with 1 errors.
+# Compile of Nucleo.v was successful.
+vsim work.coreTB
+# vsim work.coreTB 
+# Start time: 08:01:18 on Nov 27,2025
+# Loading work.coreTB
+# Loading work.NucleoTop
+# Loading work.PC
+# Loading work.sumador
+# Loading work.memoryInstructions
+# Loading work.IF_ID
+# Loading work.Control
+# Loading work.Registros
+# Loading work.signed_extention
+# Loading work.ID_EX
+# Loading work.Forward
+# Loading work.desplazar
+# Loading work.ALUcontrol
+# Loading work.MUX3_1
+# Loading work.MUX
+# Loading work.ALU
+# Loading work.EX_MEM
+# Loading work.AND
+# Loading work.memoriaDatos
+# Loading work.MEM_WB
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Lenovo  Hostname: DESKTOP-M9T7LNH  ProcessID: 12512
+#           Attempting to use alternate WLF file "./wlft20z0r3".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft20z0r3
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run

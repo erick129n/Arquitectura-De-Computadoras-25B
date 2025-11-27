@@ -10,7 +10,8 @@ module Control
 	output reg [SIZE_ALU_OP-1:0] ALUOp,
 	output reg MemWrite,
 	output reg ALUSrc,
-	output reg RegWrite
+	output reg RegWrite,
+	output reg Jump
 	);
 	
 always@(instruccion) begin
@@ -26,6 +27,7 @@ always@(instruccion) begin
 			MemWrite = 1'b0;
 			Branch = 1'b0;
 			ALUOp = 2'b10;
+			Jump = 1'b0;
 		end
 	//INSTRUCCION DE CARGA PALABRA
 		6'b100011:
@@ -78,14 +80,23 @@ always@(instruccion) begin
 	//INSTRUCCION J
 		6'b000010:
 		begin
-			RegDest = 1'bX;
-			ALUSrc = 1'bX;
-			MemtoReg = 1'bX;
-			RegWrite = 1'bx;
-			MemRead = 1'bx;
-			MemWrite = 1'bx;
-			Branch = 1'bx;
+			Jump = 1'b1;
+			RegDest = 1'b0;
+			ALUSrc = 1'b0;
+			MemtoReg = 1'b0;
+			RegWrite = 1'b0;
+			MemRead = 1'b0;
+			MemWrite = 1'b0;
+			Branch = 1'b0;
 			ALUOp = 2'b00;
+		end
+		6'b000011:
+		begin
+			Jump = 1'b1;
+			RegWrite = 1'b1;
+			Branch = 1'b0;
+			MemRead = 1'b0;
+			MemWrite =1'b0;
 		end
 		default:
 		begin
