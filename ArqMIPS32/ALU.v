@@ -30,7 +30,8 @@ module ALU #(
     );
 
 	always@* begin
-	
+							resultado = 32'b0;
+					zero = 0;
 		case(operador)
 			4'b0000:
 				begin
@@ -47,7 +48,7 @@ module ALU #(
 			4'b0110:
 				begin
 					resultado = a - b;
-					zero = resultado ? 1 : 0;
+					zero = (resultado == 0) ? 1 : 0;
 				end
 			4'b0111:
 				begin

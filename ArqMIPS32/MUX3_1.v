@@ -5,12 +5,12 @@ module MUX3_1
 	input [SIZE-1:0] A,
 	input [SIZE-1:0] B,
 	input [SIZE-1:0] C,
-	input [SIZE_SEL-1:0] Foward,
+	input [SIZE_SEL-1:0] Forward,
 	output reg[SIZE-1:0] dato
 );
 
 	always@(*)begin
-		case(Foward)
+		case(Forward)
 		2'b00:
 			begin
 				dato = A;

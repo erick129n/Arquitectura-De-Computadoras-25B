@@ -35,7 +35,8 @@ instruccion_logica_aritmetica = {
     '100100': 'AND',   # And
     '100111': 'NOR',   # Nor
     '100101': 'OR',    # Or
-    '101010': 'SLT'    # Set Less Than
+    '101010': 'SLT',   # Set Less Than
+    '000000' : 'NOP'   # No Operation (NOP)
 }
 
 # Diccionario de instrucciones inmediatas (opcode)
@@ -49,10 +50,13 @@ instruccion_logica_aritmetica_inmediata = {
     '001011': 'SLTIU'  # Set Less Than Immediate Unsigned
 }
 
+
 # Diccionario de instrucciones de carga/almacenamiento (opcode) - TIPO I MEMORIA
 instrucciones_memoria = {
     '100011': 'LW',    # Load Word
     '101011': 'SW',    # Store Word
+    '100000': 'LB',    # Load Byte - NUEVO
+    '101000': 'SB'     # Store Byte - NUEVO
 }
 
 # Diccionario de instrucciones de salto condicional (opcode) - TIPO I
@@ -212,6 +216,63 @@ def abrir_archivo():
     except Exception as e:
         messagebox.showerror("Error", f"Error inesperado al abrir el archivo:\n{str(e)}")
 
+def guardar_instrucciones():
+    """Guarda las instrucciones escritas por el usuario en un archivo de texto."""
+    contenido_ensamblador = in_assembly.get("1.0", tk.END).strip()
+    
+    if not contenido_ensamblador:
+        messagebox.showwarning("Advertencia", "No hay instrucciones para guardar")
+        return
+    
+    # Preguntar si sobrescribir o crear nuevo
+    opcion_guardar = messagebox.askyesno(
+        "Guardar instrucciones",
+        "¿Desea seleccionar un archivo existente para sobrescribir?\n\n"
+        "Sí: Seleccionar archivo existente para sobrescribir\n"
+        "No: Crear nuevo archivo"
+    )
+    
+    if opcion_guardar:
+        # Sobrescribir archivo existente
+        archivo = filedialog.askopenfilename(
+            title="Seleccionar archivo para sobrescribir (Instrucciones)",
+            filetypes=[("Archivos de texto", "*.txt"), ("Todos los archivos", "*.*")]
+        )
+    else:
+        # Crear nuevo archivo
+        archivo = filedialog.asksaveasfilename(
+            title="Guardar como nuevo archivo (Instrucciones)",
+            defaultextension=".txt",
+            filetypes=[("Archivos de texto", "*.txt"), ("Todos los archivos", "*.*")],
+            initialfile="instrucciones_mips.txt"
+        )
+    
+    if not archivo:
+        return
+    
+    try:
+        # Verificar si el archivo ya existe (para el caso de crear nuevo)
+        if not opcion_guardar and os.path.exists(archivo):
+            respuesta = messagebox.askyesno(
+                "Archivo existente", 
+                f"El archivo '{os.path.basename(archivo)}' ya existe.\n¿Desea sobrescribirlo?"
+            )
+            if not respuesta:
+                return
+        
+        # Guardar el archivo
+        with open(archivo, "w", encoding="utf-8") as f:
+            f.write(contenido_ensamblador)
+        
+        messagebox.showinfo("Éxito", f"Instrucciones guardadas en:\n{archivo}")
+        
+    except PermissionError:
+        messagebox.showerror("Error", "No tiene permisos para guardar en esta ubicación")
+    except OSError as e:
+        messagebox.showerror("Error", f"No se pudo guardar el archivo:\n{str(e)}")
+    except Exception as e:
+        messagebox.showerror("Error", f"Error inesperado:\n{str(e)}")
+
 def exportar_a_archivo():
     """Exporta el contenido del campo Memoria a un archivo."""
     contenido_memoria = memoria_text.get("1.0", tk.END).strip()
@@ -284,14 +345,16 @@ def convertir():
             continue
 
         instruccion, datos = extraer_elementos(linea)
-        if not instruccion or len(datos) < 1:
+        if not instruccion:
             messagebox.showerror("Error", f"Línea inválida: {linea}")
             continue
-
-        tipo, codigo = obtener_codigo_binario(instruccion)
-        if not tipo or not codigo:
-            messagebox.showerror("Error", f"Instrucción desconocida: {instruccion}")
-            continue
+        if instruccion == 'NOP':
+            instruccion_final = '00000000000000000000000000000000'
+        else:
+            tipo, codigo = obtener_codigo_binario(instruccion)
+            if not tipo or not codigo:
+                messagebox.showerror("Error", f"Instrucción desconocida: {instruccion}")
+                continue
 
         if tipo == 'R':
             # Instrucción tipo R: $d, $s, $t
@@ -549,6 +612,9 @@ button_frame.grid(row=1, column=1, padx=20, pady=(0, 10))
 abrir_button = ttk.Button(button_frame, text="Abrir Archivo", command=abrir_archivo)
 abrir_button.pack(pady=5)
 
+guardar_button = ttk.Button(button_frame, text="Guardar Instrucciones", command=guardar_instrucciones)
+guardar_button.pack(pady=5)
+
 convertir_button = ttk.Button(button_frame, text="Convertir", command=convertir)
 convertir_button.pack(pady=5)
 
@@ -558,12 +624,12 @@ exportar_button.pack(pady=5)
 convertir_binario_assembly = ttk.Button(button_frame, text="Binario a Ensamblador", command=binario_a_ensamblador)
 convertir_binario_assembly.pack(pady=5)
 
-# Información sobre instrucciones soportadas - ACTUALIZADA CON SUB
+# Información sobre instrucciones soportadas - ACTUALIZADA CON LB Y SB
 info_label = tk.Label(button_frame, 
                      text="\nInstrucciones soportadas:\n"
-                          "Tipo R: ADD, SUB, AND, NOR, OR, SLT\n"
+                          "Tipo R: ADD, SUB, AND, NOR, OR, SLT, NOP\n"
                           "Tipo I: ADDI, ADDIU, ANDI, ORI, XORI, SLTI, SLTIU\n"
-                          "Memoria: LW, SW\n"
+                          "Memoria: LW, SW, LB, SB\n"  # ACTUALIZADO
                           "Salto Condicional: BEQ, BNE\n"
                           "Salto Incondicional: J, JAL\n\n"
                           "Registros especiales:\n"

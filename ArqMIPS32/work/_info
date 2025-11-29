@@ -10,7 +10,7 @@ z2
 cModel Technology
 dC:/Users/Lenovo/Documents/UDG/ProyectosModelSim/BancoRegistros
 vADD
-Z0 !s110 1763858965
+Z0 !s110 1764410414
 !i10b 1
 !s100 lT8lA93C3[AnRN@c1^KCW1
 Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -20,13 +20,13 @@ Z3 dD:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32
 Z4 w1761966894
 8D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/ADD.v
 FD:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/ADD.v
-!i122 320
+!i122 419
 L0 1 10
 Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1763858965.000000
+Z6 !s108 1764410414.000000
 !s107 D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/ADD.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/ADD.v|
 !i113 1
@@ -36,16 +36,16 @@ n@a@d@d
 vALU
 R0
 !i10b 1
-!s100 OKdmK;AbFU^gUJi4IC1B^1
+!s100 5_=3L1e3c2E88JB@Z9IZT3
 R1
-ID?5USRlTChULAgDE:k0[>3
+I28W2@UB@POZgEQjWaaG;Q3
 R2
 R3
-Z9 w1763858636
+w1764410082
 8D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/ALU.v
 FD:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/ALU.v
-!i122 321
-L0 22 48
+!i122 420
+L0 22 49
 R5
 r1
 !s85 0
@@ -58,7 +58,7 @@ R7
 R8
 n@a@l@u
 vALUcontrol
-R0
+Z9 !s110 1764410415
 !i10b 1
 !s100 Hi;<dQbSbLJ7f]L19zKnO1
 R1
@@ -68,7 +68,7 @@ R3
 R4
 8D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/ALUcontrol.v
 FD:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/ALUcontrol.v
-!i122 322
+!i122 421
 L0 1 54
 R5
 r1
@@ -82,23 +82,23 @@ R7
 R8
 n@a@l@ucontrol
 vAND
-Z10 !s110 1763858966
+R9
 !i10b 1
 !s100 aU0^CEfei?d9B^HK3HH>H0
 R1
 IS2>CdDER?<zE_<F5khzO[1
 R2
 R3
-R9
+Z10 w1763858636
 8D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/AND.v
 FD:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/AND.v
-!i122 323
+!i122 422
 L0 1 12
 R5
 r1
 !s85 0
 31
-R6
+Z11 !s108 1764410415.000000
 !s107 D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/AND.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/AND.v|
 !i113 1
@@ -106,7 +106,7 @@ R7
 R8
 n@a@n@d
 vbuffer
-R10
+R9
 !i10b 1
 !s100 Ko3EUR9dJaPT`]A;2CO5_2
 R1
@@ -116,36 +116,36 @@ R3
 R4
 8D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Buff.v
 FD:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Buff.v
-!i122 324
+!i122 423
 L0 1 14
 R5
 r1
 !s85 0
 31
-Z11 !s108 1763858966.000000
+R11
 !s107 D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Buff.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Buff.v|
 !i113 1
 R7
 R8
 vControl
-Z12 !s110 1763858968
+Z12 !s110 1764410418
 !i10b 1
-!s100 _fL6XT`_QWz@f_K5VT`jl2
+!s100 5:6_Ub0<5@YGM50nhXB=Y2
 R1
-I=V4g633G6CGa1K1>:?_Dd3
+IP6Y]EiI9@;54eo=Q=0SPC0
 R2
 R3
-R9
+w1764410405
 8D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/UnidadControl.v
 FD:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/UnidadControl.v
-!i122 339
-L0 1 104
+!i122 438
+L0 1 117
 R5
 r1
 !s85 0
 31
-Z13 !s108 1763858968.000000
+Z13 !s108 1764410418.000000
 !s107 D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/UnidadControl.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/UnidadControl.v|
 !i113 1
@@ -153,23 +153,23 @@ R7
 R8
 n@control
 vcoreTB
-R12
+Z14 !s110 1764410417
 !i10b 1
 !s100 BG>9X=T;EdRNA=Xh9g1a>0
 R1
 I<@UY`:RgXf_:^PnY73OAY0
 R2
 R3
-R9
+R10
 8D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/NucleoTB.v
 FD:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/NucleoTB.v
-!i122 335
+!i122 434
 L0 2 38
 R5
 r1
 !s85 0
 31
-Z14 !s108 1763858967.000000
+Z15 !s108 1764410417.000000
 !s107 D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/NucleoTB.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/NucleoTB.v|
 !i113 1
@@ -177,7 +177,7 @@ R7
 R8
 ncore@t@b
 vdesplazar
-R10
+R9
 !i10b 1
 !s100 K=R=@^j;I5nmM2Ej8O4`O1
 R1
@@ -187,7 +187,7 @@ R3
 R4
 8D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/desplazador.v
 FD:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/desplazador.v
-!i122 326
+!i122 425
 L0 1 11
 R5
 r1
@@ -200,18 +200,18 @@ R11
 R7
 R8
 vEX_MEM
-R10
+Z16 !s110 1764410416
 !i10b 1
-!s100 ZMHjT>OmffgEMHW_Hbb:53
+!s100 ]MHB;3HdAkiIWBQ<Cgj0T3
 R1
-IAW1]g:1GK1Pk0VjlUh=La2
+I>4ac]JojIH:O<bUO6emf=0
 R2
 R3
-w1763408596
+w1764393635
 8D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/EX_MEM.v
 FD:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/EX_MEM.v
-!i122 327
-L0 1 39
+!i122 426
+L0 1 41
 R5
 r1
 !s85 0
@@ -224,47 +224,47 @@ R7
 R8
 n@e@x_@m@e@m
 vForward
-!s110 1763877485
+R12
 !i10b 1
 !s100 7KWKhn[0AjF7nDOeEZ=W80
 R1
-IbI?d4SI2;^eIe64jU<PE>1
+INGjKBM3loM30VVhGOeb2E3
 R2
 R3
 w1763877480
-8D:\USER\Documents\Archivos\Arquitectura-De-Computadoras-25B\ArqMIPS32\UnidadEncaminamiento.v
-FD:\USER\Documents\Archivos\Arquitectura-De-Computadoras-25B\ArqMIPS32\UnidadEncaminamiento.v
-!i122 340
+8D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/UnidadEncaminamiento.v
+FD:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/UnidadEncaminamiento.v
+!i122 439
 L0 1 42
 R5
 r1
 !s85 0
 31
-!s108 1763877485.000000
-!s107 D:\USER\Documents\Archivos\Arquitectura-De-Computadoras-25B\ArqMIPS32\UnidadEncaminamiento.v|
-!s90 -reportprogress|300|-work|work|-stats=none|D:\USER\Documents\Archivos\Arquitectura-De-Computadoras-25B\ArqMIPS32\UnidadEncaminamiento.v|
+R13
+!s107 D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/UnidadEncaminamiento.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/UnidadEncaminamiento.v|
 !i113 1
 R7
 R8
 n@forward
 vID_EX
-R10
+R16
 !i10b 1
-!s100 XHBh0FSS4DK5Pd3Ym7@CT3
+!s100 hnJ]2ldoUOV;?FndUT0JN1
 R1
-I?jUFAOTF<=YZn[b?m[_=41
+IAj7J0V;`?Z2]>8@DTdC7c0
 R2
 R3
-w1763409681
+w1764396837
 8D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/ID_EX.v
 FD:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/ID_EX.v
-!i122 328
-L0 1 44
+!i122 427
+L0 1 53
 R5
 r1
 !s85 0
 31
-R11
+Z17 !s108 1764410416.000000
 !s107 D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/ID_EX.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/ID_EX.v|
 !i113 1
@@ -272,7 +272,7 @@ R7
 R8
 n@i@d_@e@x
 vIF_ID
-Z15 !s110 1763858967
+R16
 !i10b 1
 !s100 GTm1mj2gj_@WWWmT;jn@61
 R1
@@ -282,13 +282,13 @@ R3
 R4
 8D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/IF_ID.v
 FD:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/IF_ID.v
-!i122 329
-Z16 L0 1 16
+!i122 428
+L0 1 16
 R5
 r1
 !s85 0
 31
-R11
+R17
 !s107 D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/IF_ID.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/IF_ID.v|
 !i113 1
@@ -296,7 +296,7 @@ R7
 R8
 n@i@f_@i@d
 vMEM_WB
-R15
+R16
 !i10b 1
 !s100 6FDzEdnB4bPiMZ]zPW^^B0
 R1
@@ -306,13 +306,13 @@ R3
 R4
 8D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/MEM_WB.v
 FD:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/MEM_WB.v
-!i122 330
-Z17 L0 1 25
+!i122 429
+Z18 L0 1 25
 R5
 r1
 !s85 0
 31
-R14
+R17
 !s107 D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/MEM_WB.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/MEM_WB.v|
 !i113 1
@@ -320,23 +320,23 @@ R7
 R8
 n@m@e@m_@w@b
 vmemoriaDatos
-R15
+R14
 !i10b 1
-!s100 [KAMJA02U0IM6Ib368K6R3
+!s100 kL]5Kl]iY=lc_^^9T0o8E1
 R1
-IJW:U]9e;3BIn;VQ`>zXYJ3
+If`k^V4Z1bX;JDcGcndFdO0
 R2
 R3
-R9
+w1764395937
 8D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/MemoryData.v
 FD:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/MemoryData.v
-!i122 332
-L0 1 27
+!i122 431
+L0 1 58
 R5
 r1
 !s85 0
 31
-R14
+R17
 !s107 D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/MemoryData.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/MemoryData.v|
 !i113 1
@@ -344,23 +344,23 @@ R7
 R8
 nmemoria@datos
 vmemoryInstructions
-R15
+R16
 !i10b 1
 !s100 dd`5Jlc1K^FOnbk>lK>DN2
 R1
 IiFZKH5H3mhhl_h9O@[@G43
 R2
 R3
-R9
+R10
 8D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/memInstrucciones.v
 FD:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/memInstrucciones.v
-!i122 331
-R17
+!i122 430
+R18
 R5
 r1
 !s85 0
 31
-R14
+R17
 !s107 D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/memInstrucciones.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/memInstrucciones.v|
 !i113 1
@@ -368,7 +368,7 @@ R7
 R8
 nmemory@instructions
 vMUX
-R15
+R14
 !i10b 1
 !s100 d_d1mn4iUQYnEV[2CedPc2
 R1
@@ -378,13 +378,13 @@ R3
 R4
 8D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/mux.v
 FD:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/mux.v
-!i122 333
-R17
+!i122 432
+R18
 R5
 r1
 !s85 0
 31
-R14
+R15
 !s107 D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/mux.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/mux.v|
 !i113 1
@@ -392,47 +392,47 @@ R7
 R8
 n@m@u@x
 vMUX3_1
-!s110 1763877963
+R12
 !i10b 1
-!s100 2fYPU^^;BHC]B457HWmd_2
+!s100 QJ=<5e1Oi4UL3lPW=NfIe2
 R1
-IJ<[5ZWQIa?WL[3h9d?N3;1
+IGJahCGYcHb_;m1]9YhH593
 R2
 R3
-w1763877957
-8D:\USER\Documents\Archivos\Arquitectura-De-Computadoras-25B\ArqMIPS32\MUX3_1.v
-FD:\USER\Documents\Archivos\Arquitectura-De-Computadoras-25B\ArqMIPS32\MUX3_1.v
-!i122 341
+w1764393514
+8D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/MUX3_1.v
+FD:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/MUX3_1.v
+!i122 440
 L0 1 31
 R5
 r1
 !s85 0
 31
-!s108 1763877963.000000
-!s107 D:\USER\Documents\Archivos\Arquitectura-De-Computadoras-25B\ArqMIPS32\MUX3_1.v|
-!s90 -reportprogress|300|-work|work|-stats=none|D:\USER\Documents\Archivos\Arquitectura-De-Computadoras-25B\ArqMIPS32\MUX3_1.v|
+R13
+!s107 D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/MUX3_1.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/MUX3_1.v|
 !i113 1
 R7
 R8
 n@m@u@x3_1
 vNucleoTop
-R15
+!s110 1764410733
 !i10b 1
-!s100 0a1[3:VcL=;<hS2E1iPBC3
+!s100 XZnmXgE4Y7>UGH1L]2[>60
 R1
-Iecl>G=Kgm;eE@R5M?;NXb3
+ImmIdI:?PHcYlB^S2d0]gm1
 R2
 R3
-R9
+w1764410726
 8D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v
 FD:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v
-!i122 334
-L0 1 262
+!i122 441
+L0 1 337
 R5
 r1
 !s85 0
 31
-R14
+!s108 1764410733.000000
 !s107 D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v|
 !i113 1
@@ -440,7 +440,7 @@ R7
 R8
 n@nucleo@top
 vPC
-R10
+R9
 !i10b 1
 !s100 ]R?^aa9hUPfN2YYcRe1b53
 R1
@@ -450,7 +450,7 @@ R3
 w1763421113
 8D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/contador.v
 FD:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/contador.v
-!i122 325
+!i122 424
 L0 1 18
 R5
 r1
@@ -464,7 +464,7 @@ R7
 R8
 n@p@c
 vRegistros
-R12
+R14
 !i10b 1
 !s100 J[N<?a3?@Zja5`Ba^MX;g2
 R1
@@ -474,13 +474,13 @@ R3
 w1763318729
 8D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Registros.v
 FD:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Registros.v
-!i122 336
+!i122 435
 L0 20 29
 R5
 r1
 !s85 0
 31
-R13
+R15
 !s107 D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Registros.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Registros.v|
 !i113 1
@@ -490,16 +490,16 @@ n@registros
 vsigned_extention
 R12
 !i10b 1
-!s100 RjINzmjXmhKOT:Y2AOc^l1
+!s100 e_WZmQ`W;zUHQ]icX:j2B2
 R1
-IDZbGbD?NNB:>UeSEIBa1U3
+InlYm^CkKbNTgP?RzKBEOb2
 R2
 R3
-R9
+w1764392866
 8D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/unidad_extesion_signo.v
 FD:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/unidad_extesion_signo.v
-!i122 338
-R16
+!i122 437
+R18
 R5
 r1
 !s85 0
@@ -521,13 +521,13 @@ R3
 R4
 8D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/sumador.v
 FD:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/sumador.v
-!i122 337
+!i122 436
 L0 1 13
 R5
 r1
 !s85 0
 31
-R13
+R15
 !s107 D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/sumador.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/sumador.v|
 !i113 1

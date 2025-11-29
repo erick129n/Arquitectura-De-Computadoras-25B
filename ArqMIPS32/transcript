@@ -1,10 +1,3 @@
-# 0 compiles, 20 failed with no errors.
-# Error opening C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/ADD.v
-# Path name 'C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/ADD.v' doesn't exist.
-# Error opening C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/ADD.v
-# Path name 'C:/Users/Lenovo/Documents/UDG/ProyectosModelSim/ArqMIPS32/ADD.v' doesn't exist.
-# Error opening C:\Users\Lenovo\Documents\UDG\ProyectosModelSim\ArqMIPS32\Buff.v
-# Path name 'C:\Users\Lenovo\Documents\UDG\ProyectosModelSim\ArqMIPS32\Buff.v' doesn't exist.
 # Compile of ADD.v was successful.
 # Compile of ALU.v was successful.
 # Compile of ALUcontrol.v was successful.
@@ -25,10 +18,12 @@
 # Compile of sumador.v was successful.
 # Compile of unidad_extesion_signo.v was successful.
 # Compile of UnidadControl.v was successful.
-# 20 compiles, 0 failed with no errors.
+# Compile of UnidadEncaminamiento.v was successful.
+# Compile of MUX3_1.v was successful.
+# 22 compiles, 0 failed with no errors.
 vsim work.coreTB
 # vsim work.coreTB 
-# Start time: 18:49:36 on Nov 22,2025
+# Start time: 23:01:30 on Nov 28,2025
 # Loading work.coreTB
 # Loading work.NucleoTop
 # Loading work.PC
@@ -39,6 +34,10 @@ vsim work.coreTB
 # Loading work.Registros
 # Loading work.signed_extention
 # Loading work.ID_EX
+# ** Error: (vsim-3033) Instantiation of 'Foward' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 158
+#         Searched libraries:
+#             D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/work
 # Loading work.desplazar
 # Loading work.ALUcontrol
 # Loading work.MUX
@@ -47,5 +46,1960 @@ vsim work.coreTB
 # Loading work.AND
 # Loading work.memoriaDatos
 # Loading work.MEM_WB
+# Error loading design
+# End time: 23:01:31 on Nov 28,2025, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 2
+# Compile of ADD.v was successful.
+# Compile of ALU.v was successful.
+# Compile of ALUcontrol.v was successful.
+# Compile of AND.v was successful.
+# Compile of Buff.v was successful.
+# Compile of contador.v was successful.
+# Compile of desplazador.v was successful.
+# Compile of EX_MEM.v was successful.
+# Compile of ID_EX.v was successful.
+# Compile of IF_ID.v was successful.
+# Compile of MEM_WB.v was successful.
+# Compile of memInstrucciones.v was successful.
+# Compile of MemoryData.v failed with 1 errors.
+# Compile of mux.v was successful.
+# Compile of Nucleo.v was successful.
+# Compile of NucleoTB.v was successful.
+# Compile of Registros.v was successful.
+# Compile of sumador.v was successful.
+# Compile of unidad_extesion_signo.v was successful.
+# Compile of UnidadControl.v was successful.
 # Compile of UnidadEncaminamiento.v was successful.
 # Compile of MUX3_1.v was successful.
+# 22 compiles, 1 failed with 1 error.
+# Compile of MemoryData.v was successful.
+# Compile of MemoryData.v was successful.
+# Compile of ADD.v was successful.
+# Compile of ALU.v was successful.
+# Compile of ALUcontrol.v was successful.
+# Compile of AND.v was successful.
+# Compile of Buff.v was successful.
+# Compile of contador.v was successful.
+# Compile of desplazador.v was successful.
+# Compile of EX_MEM.v was successful.
+# Compile of ID_EX.v was successful.
+# Compile of IF_ID.v was successful.
+# Compile of MEM_WB.v was successful.
+# Compile of memInstrucciones.v was successful.
+# Compile of MemoryData.v was successful.
+# Compile of mux.v was successful.
+# Compile of Nucleo.v was successful.
+# Compile of NucleoTB.v was successful.
+# Compile of Registros.v was successful.
+# Compile of sumador.v was successful.
+# Compile of unidad_extesion_signo.v was successful.
+# Compile of UnidadControl.v was successful.
+# Compile of UnidadEncaminamiento.v was successful.
+# Compile of MUX3_1.v was successful.
+# 22 compiles, 0 failed with no errors.
+vsim work.coreTB
+# vsim work.coreTB 
+# Start time: 23:13:26 on Nov 28,2025
+# Loading work.coreTB
+# Loading work.NucleoTop
+# Loading work.PC
+# Loading work.sumador
+# Loading work.memoryInstructions
+# Loading work.IF_ID
+# Loading work.Control
+# Loading work.Registros
+# Loading work.signed_extention
+# Loading work.ID_EX
+# Loading work.Forward
+# Loading work.desplazar
+# Loading work.ALUcontrol
+# Loading work.MUX3_1
+# Loading work.MUX
+# Loading work.ALU
+# Loading work.EX_MEM
+# Loading work.memoriaDatos
+# Loading work.MEM_WB
+# ** Error (suppressible): (vsim-3389) Port 'is_byte_in' not found in the connected module (26th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/ID_EX File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 137
+# ** Error (suppressible): (vsim-3389) Port 'is_byte_out' not found in the connected module (27th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/ID_EX File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 137
+# ** Error: (vsim-3063) Port 'Forward' not found in the connected module (4th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/datoA File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 218
+# ** Error: (vsim-3063) Port 'Forward' not found in the connected module (4th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/datoB File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 226
+# ** Error (suppressible): (vsim-3389) Port 'is_byte_in' not found in the connected module (16th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/EX_MEM File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 265
+# ** Error (suppressible): (vsim-3389) Port 'is_byte_out' not found in the connected module (17th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/EX_MEM File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 265
+# Error loading design
+# End time: 23:13:27 on Nov 28,2025, Elapsed time: 0:00:01
+# Errors: 6, Warnings: 5
+# Compile of ID_EX.v was successful.
+vsim work.coreTB
+# vsim work.coreTB 
+# Start time: 23:17:59 on Nov 28,2025
+# Loading work.coreTB
+# Loading work.NucleoTop
+# Loading work.PC
+# Loading work.sumador
+# Loading work.memoryInstructions
+# Loading work.IF_ID
+# Loading work.Control
+# Loading work.Registros
+# Loading work.signed_extention
+# Loading work.ID_EX
+# Loading work.Forward
+# Loading work.desplazar
+# Loading work.ALUcontrol
+# Loading work.MUX3_1
+# Loading work.MUX
+# Loading work.ALU
+# Loading work.EX_MEM
+# Loading work.memoriaDatos
+# Loading work.MEM_WB
+# ** Error: (vsim-3063) Port 'Forward' not found in the connected module (4th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/datoA File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 218
+# ** Error: (vsim-3063) Port 'Forward' not found in the connected module (4th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/datoB File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 226
+# ** Error (suppressible): (vsim-3389) Port 'is_byte_in' not found in the connected module (16th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/EX_MEM File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 265
+# ** Error (suppressible): (vsim-3389) Port 'is_byte_out' not found in the connected module (17th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/EX_MEM File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 265
+# Error loading design
+# End time: 23:18:00 on Nov 28,2025, Elapsed time: 0:00:01
+# Errors: 4, Warnings: 2
+# Compile of MUX3_1.v was successful.
+vsim work.coreTB
+# vsim work.coreTB 
+# Start time: 23:19:45 on Nov 28,2025
+# Loading work.coreTB
+# Loading work.NucleoTop
+# Loading work.PC
+# Loading work.sumador
+# Loading work.memoryInstructions
+# Loading work.IF_ID
+# Loading work.Control
+# Loading work.Registros
+# Loading work.signed_extention
+# Loading work.ID_EX
+# Loading work.Forward
+# Loading work.desplazar
+# Loading work.ALUcontrol
+# Loading work.MUX3_1
+# Loading work.MUX
+# Loading work.ALU
+# Loading work.EX_MEM
+# Loading work.memoriaDatos
+# Loading work.MEM_WB
+# ** Error (suppressible): (vsim-3389) Port 'is_byte_in' not found in the connected module (16th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/EX_MEM File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 265
+# ** Error (suppressible): (vsim-3389) Port 'is_byte_out' not found in the connected module (17th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/EX_MEM File: D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/Nucleo.v Line: 265
+# Error loading design
+# End time: 23:19:45 on Nov 28,2025, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 2
+# Compile of EX_MEM.v was successful.
+vsim work.coreTB
+# vsim work.coreTB 
+# Start time: 23:20:44 on Nov 28,2025
+# Loading work.coreTB
+# Loading work.NucleoTop
+# Loading work.PC
+# Loading work.sumador
+# Loading work.memoryInstructions
+# Loading work.IF_ID
+# Loading work.Control
+# Loading work.Registros
+# Loading work.signed_extention
+# Loading work.ID_EX
+# Loading work.Forward
+# Loading work.desplazar
+# Loading work.ALUcontrol
+# Loading work.MUX3_1
+# Loading work.MUX
+# Loading work.ALU
+# Loading work.EX_MEM
+# Loading work.memoriaDatos
+# Loading work.MEM_WB
+# Compile of MemoryData.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.memoriaDatos
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+restart
+add wave -position insertpoint  \
+sim:/coreTB/DUT/PC/clk
+add wave -position insertpoint  \
+sim:/coreTB/DUT/memoryInstructions/instruction
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+add wave -position insertpoint  \
+sim:/coreTB/DUT/Control/RegDest \
+sim:/coreTB/DUT/Control/Branch \
+sim:/coreTB/DUT/Control/MemRead \
+sim:/coreTB/DUT/Control/MemtoReg \
+sim:/coreTB/DUT/Control/ALUOp \
+sim:/coreTB/DUT/Control/MemWrite \
+sim:/coreTB/DUT/Control/ALUSrc \
+sim:/coreTB/DUT/Control/RegWrite \
+sim:/coreTB/DUT/Control/Jump \
+sim:/coreTB/DUT/Control/is_byte \
+sim:/coreTB/DUT/Control/is_unsigned
+add wave -position insertpoint  \
+sim:/coreTB/DUT/BR/ARead1 \
+sim:/coreTB/DUT/BR/ARead2 \
+sim:/coreTB/DUT/BR/AWR \
+sim:/coreTB/DUT/BR/DataIn \
+sim:/coreTB/DUT/BR/WE \
+sim:/coreTB/DUT/BR/DRead1 \
+sim:/coreTB/DUT/BR/DRead2
+add wave -position insertpoint  \
+sim:/coreTB/DUT/extension/is_unsigned
+add wave -position insertpoint  \
+sim:/coreTB/DUT/ALU/a \
+sim:/coreTB/DUT/ALU/b \
+sim:/coreTB/DUT/ALU/operador \
+sim:/coreTB/DUT/ALU/zero \
+sim:/coreTB/DUT/ALU/resultado
+add wave -position insertpoint  \
+sim:/coreTB/DUT/memoriaDatos/address \
+sim:/coreTB/DUT/memoriaDatos/dato \
+sim:/coreTB/DUT/memoriaDatos/MemWrite \
+sim:/coreTB/DUT/memoriaDatos/MemRead \
+sim:/coreTB/DUT/memoriaDatos/is_byte \
+sim:/coreTB/DUT/memoriaDatos/datoLeido
+# Compile of MemoryData.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.memoriaDatos
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+# ** Warning: (vsim-PLI-3406) Too many digits (32) in data on line 1 of file "Storange.txt". (Max is 8.)    : D:/USER/Documents/Archivos/Arquitectura-De-Computadoras-25B/ArqMIPS32/MemoryData.v(17)
+#    Time: 0 ps  Iteration: 0  Instance: /coreTB/DUT/memoriaDatos
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+restart
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+restart
+# Compile of MemoryData.v was successful.
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of ID_EX.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ID_EX
+# Loading work.memoriaDatos
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of ID_EX.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ID_EX
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+add wave -position insertpoint  \
+sim:/coreTB/DUT/PC/pc_in
+restart
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+add wave -position insertpoint  \
+sim:/coreTB/DUT/mux_branch/dato \
+sim:/coreTB/DUT/mux_branch/dato2 \
+sim:/coreTB/DUT/mux_branch/sel \
+sim:/coreTB/DUT/mux_branch/datoOut
+add wave -position insertpoint  \
+sim:/coreTB/DUT/mux_jump/dato \
+sim:/coreTB/DUT/mux_jump/dato2 \
+sim:/coreTB/DUT/mux_jump/sel \
+sim:/coreTB/DUT/mux_jump/datoOut
+restart
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of ALU.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ALU
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run -continue
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of ALU.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ALU
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of ADD.v was successful.
+# Compile of ALU.v was successful.
+# Compile of ALUcontrol.v was successful.
+# Compile of AND.v was successful.
+# Compile of Buff.v was successful.
+# Compile of contador.v was successful.
+# Compile of desplazador.v was successful.
+# Compile of EX_MEM.v was successful.
+# Compile of ID_EX.v was successful.
+# Compile of IF_ID.v was successful.
+# Compile of MEM_WB.v was successful.
+# Compile of memInstrucciones.v was successful.
+# Compile of MemoryData.v was successful.
+# Compile of mux.v was successful.
+# Compile of Nucleo.v was successful.
+# Compile of NucleoTB.v was successful.
+# Compile of Registros.v was successful.
+# Compile of sumador.v was successful.
+# Compile of unidad_extesion_signo.v was successful.
+# Compile of UnidadControl.v was successful.
+# Compile of UnidadEncaminamiento.v was successful.
+# Compile of MUX3_1.v was successful.
+# 22 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.coreTB
+# Loading work.NucleoTop
+# Loading work.PC
+# Loading work.sumador
+# Loading work.memoryInstructions
+# Loading work.IF_ID
+# Loading work.Control
+# Loading work.Registros
+# Loading work.signed_extention
+# Loading work.ID_EX
+# Loading work.Forward
+# Loading work.desplazar
+# Loading work.ALUcontrol
+# Loading work.MUX3_1
+# Loading work.MUX
+# Loading work.ALU
+# Loading work.EX_MEM
+# Loading work.memoriaDatos
+# Loading work.MEM_WB
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of Nucleo.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.NucleoTop
+run
+# GetModuleFileName: No se puede encontrar el módulo especificado.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run

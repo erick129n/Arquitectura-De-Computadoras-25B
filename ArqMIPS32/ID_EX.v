@@ -19,6 +19,7 @@ module ID_EX#(parameter SIZE = 32,
 	input [ADDR_SIZE-1:0] adrWrite1,
 	input [ADDR_SIZE-1:0] adrWrite2,
 	input [SIZE_FNC-1:0] funcion_in,
+	input is_byte_in,
 	output reg [S_WB-1:0]WB_out,
 	output reg [S_M-1:0]M_out,
 	output reg [S_EX-1:0]EX_out,
@@ -30,7 +31,8 @@ module ID_EX#(parameter SIZE = 32,
 	output reg [ADDR_SIZE-1:0] AWrite1,
 	output reg [ADDR_SIZE-1:0] AWrite2,
 	output reg [ADDR_SIZE-1:0] Rs,
-	output reg [ADDR_SIZE-1:0] Rt
+	output reg [ADDR_SIZE-1:0] Rt,
+	output reg is_byte_out
 );
 
 always @(posedge clk) begin
@@ -46,5 +48,6 @@ always @(posedge clk) begin
 	AWrite2 <= adrWrite2;
 	Rs <= if_id_Rs;
 	Rt <= if_id_Rt;
+	is_byte_out <= is_byte_in;
 end
 endmodule
