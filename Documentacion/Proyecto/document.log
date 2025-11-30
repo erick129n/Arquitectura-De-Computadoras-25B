@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.23)  29 NOV 2025 09:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.23)  29 NOV 2025 09:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**"./Decodificador MIPS.tex"
-(Decodificador MIPS.tex
+**./document.tex
+(document.tex
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-11>
 (D:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -889,15 +889,15 @@ File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
 )
 
 LaTeX Warning: Unused global option(s):
-    [tikz,letterpaper11pt].
+    [tikzletterpaper11pt].
 
-(Decodificador MIPS.aux
+(document.aux
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
 (babel)             Reported  on input line 11.
 )
-\openout1 = `"Decodificador MIPS.aux"'.
+\openout1 = `document.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
 LaTeX Font Info:    ... okay on input line 60.
@@ -985,9 +985,9 @@ Package caption Info: End \AtBeginDocument code.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package hyperref Info: Link coloring OFF on input line 60.
-(Decodificador MIPS.out) (Decodificador MIPS.out)
+(document.out) (document.out)
 \@outlinefile=\write4
-\openout4 = `"Decodificador MIPS.out"'.
+\openout4 = `document.out'.
 
 \c@lstlisting=\count357
 
@@ -1045,7 +1045,7 @@ l.62 	\newpage
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-<example-image.pdf, id=14, 321.2pt x 240.9pt>
+<example-image.pdf, id=178, 321.2pt x 240.9pt>
 File: example-image.pdf Graphic file (type pdf)
 <use example-image.pdf>
 Package pdftex.def Info: example-image.pdf  used on input line 62.
@@ -1076,28 +1076,37 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 
 [2 <D:/Users/USER/AppData/Local/Programs/MiKTeX/tex/latex/mwe/example-image.pdf
->] (Decodificador MIPS.toc)
-\tf@toc=\write5
-\openout5 = `"Decodificador MIPS.toc"'.
-
- (Decodificador MIPS.lof)
-\tf@lof=\write6
-\openout6 = `"Decodificador MIPS.lof"'.
-
- (Decodificador MIPS.lot
+>] (document.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 2.
+(Font)              <10> on input line 3.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 2.
+(Font)              <7> on input line 3.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 2.
+(Font)              <5> on input line 3.
+
+
+[1{D:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmsc.enc}]
+)
+\tf@toc=\write5
+\openout5 = `document.toc'.
+
+ (document.lof
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+)
+\tf@lof=\write6
+\openout6 = `document.lof'.
+
+ (document.lot
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
 
 ! Argument of \language@active@arg" has an extra }.
 <inserted text> 
                 \par 
-l.5 ...para el caso "SaaS"}}{10}{table.caption.13}
+l.5 ... para el caso "SaaS"}}{9}{table.caption.13}
                                                   %
 I've run across a `}' that doesn't seem to match anything.
 For example, `\def\a#1{...}' and `\a}' would produce
@@ -1110,7 +1119,7 @@ Runaway argument?
 ! Paragraph ended before \language@active@arg" was complete.
 <to be read again> 
                    \par 
-l.5 ...para el caso "SaaS"}}{10}{table.caption.13}
+l.5 ... para el caso "SaaS"}}{9}{table.caption.13}
                                                   %
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
@@ -1124,16 +1133,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--5
 ! pdfTeX error (ext1): \pdfendlink cannot be used in vertical mode.
 \close@pdflink ...\Hy@VerboseLinkStop \pdfendlink 
                                                   
-l.5 ...para el caso "SaaS"}}{10}{table.caption.13}
+l.5 ... para el caso "SaaS"}}{9}{table.caption.13}
                                                   %
 
  
 Here is how much of TeX's memory you used:
- 24714 strings out of 468149
- 457494 string characters out of 5431566
- 844852 words of memory out of 5000000
- 52917 multiletter control sequences out of 15000+600000
- 667267 words of font info for 68 fonts, out of 8000000 for 9000
+ 24807 strings out of 468149
+ 458521 string characters out of 5431566
+ 859483 words of memory out of 5000000
+ 52965 multiletter control sequences out of 15000+600000
+ 672961 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,7n,91p,465b,486s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,7n,91p,453b,779s stack positions out of 10000i,1000n,20000p,200000b,200000s
 !  ==> Fatal error occurred, no output PDF file produced!
